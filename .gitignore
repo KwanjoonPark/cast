@@ -14,3 +14,6 @@ outputs/**/*.wav
 outputs/**/*.pt
 outputs/**/spectrogram.png
 outputs/**/manifest.json
+
+# rewritten by every pytest run (random-init unit parity numbers); checkpoint-based parity files stay versioned
+outputs/validation/unit_*.json
