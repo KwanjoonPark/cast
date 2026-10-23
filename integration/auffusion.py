@@ -58,14 +58,16 @@ def select_cross_attention(unet) -> Dict[str, torch.nn.Module]:
     return selected
 
 
-def apply_cast(unet, alpha: float, lam: float, apply_to_uncond: bool = True, collect_stats: bool = False):
+def apply_cast(unet, alpha: float, lam: float, apply_to_uncond: bool = True, collect_stats: bool = False,
+               attention_type: str = "entmax_mix", beta: float = 1.0, probe_betas=(), probe_entmax: bool = False, lambda_sharp: float = 0.0):
     """Install CastCrossAttnProcessor on the 16 attn2 modules. Returns {name: original_processor}."""
     from cast.attention.cast_processor import CastCrossAttnProcessor
     originals = {}
     for name, mod in select_cross_attention(unet).items():
         originals[name] = mod.processor
         mod.set_processor(CastCrossAttnProcessor(alpha=alpha, lam=lam, apply_to_uncond=apply_to_uncond,
-                                                 collect_stats=collect_stats, name=name))
+                                                 collect_stats=collect_stats, name=name, attention_type=attention_type,
+                                                 beta=beta, probe_betas=probe_betas, probe_entmax=probe_entmax, lambda_sharp=lambda_sharp))
     return originals
 
 
@@ -75,8 +77,8 @@ def restore_processors(unet, originals: Dict[str, object]):
 
 
 @contextlib.contextmanager
-def cast_installed(unet, alpha: float, lam: float, apply_to_uncond: bool = True, collect_stats: bool = False):
-    originals = apply_cast(unet, alpha, lam, apply_to_uncond, collect_stats)
+def cast_installed(unet, alpha: float, lam: float, apply_to_uncond: bool = True, collect_stats: bool = False, **kw):
+    originals = apply_cast(unet, alpha, lam, apply_to_uncond, collect_stats, **kw)
     try:
         yield originals
     finally:

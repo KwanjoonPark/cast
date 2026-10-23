@@ -11,6 +11,8 @@ MODES = {
     "cast_sparse":  (True, 1.5, 1.0),
     "cast_pladis":  (True, 1.5, 2.0),
     "cast":         (True, 1.5, None),   # generic CAST arm: alpha 1.5, lambda must be given explicitly
+    "sharp_softmax": (True, 1.5, 0.0),   # Softmax(beta * logits) on the same 16 attn2 modules; alpha/lam unused
+    "sharp_mix":     (True, 1.5, 0.0),   # W_dense + lambda_sharp*(Softmax(beta*logits) - W_dense); alpha/lam unused
 }
 
 
@@ -31,12 +33,19 @@ class CastConfig:
     lam: Optional[float] = None
     apply_to_uncond: bool = True
     collect_stats: bool = True
+    attention_type: str = "entmax_mix"   # "entmax_mix" (CAST/PLADIS, uses alpha & lam) or "softmax" (Sharp Softmax, uses beta)
+    beta: float = 1.0                    # Sharp Softmax inverse temperature; used when attention_type in ("softmax", "sharp_mix")
+    lambda_sharp: float = 0.0            # partial sharp guidance weight; only used when attention_type == "sharp_mix" (NOT the Entmax lambda `lam`)
     deterministic_self_attn: bool = False   # True: force the math SDPA backend (bitwise-repeatable self-attention, ~4x slower U-Net)
     output_dir: str = "outputs"
 
     def resolved(self) -> "CastConfig":
         use_cast, a, l = MODES[self.mode]
         c = CastConfig(**asdict(self))
+        if self.mode == "sharp_softmax":
+            c.attention_type = "softmax"
+        if self.mode == "sharp_mix":
+            c.attention_type = "sharp_mix"
         if use_cast:
             c.alpha = a if self.alpha is None else self.alpha
             c.lam = l if self.lam is None else self.lam

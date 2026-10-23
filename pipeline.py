@@ -79,7 +79,7 @@ def save_spectrogram_png(spec: torch.Tensor, path: str, title: str = ""):
 
 
 def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = None, out_dir: Optional[str] = None,
-            use_generator: bool = True, save: bool = True) -> dict:
+            use_generator: bool = True, save: bool = True, probe_betas=(), probe_entmax: bool = False) -> dict:
     """Run one generation. Returns a result dict (audio, spectrogram, final latents, manifest).
     `initial_latents` (if given) is passed verbatim as `latents=`; a seeded generator is still passed
     (harmless: PNDM.step ignores it, prepare_latents skips the draw when latents are provided)."""
@@ -87,7 +87,8 @@ def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = Non
     unet = pipe.unet
     originals = {}
     if cfg.use_cast:
-        originals = apply_cast(unet, cfg.alpha, cfg.lam, cfg.apply_to_uncond, cfg.collect_stats)
+        originals = apply_cast(unet, cfg.alpha, cfg.lam, cfg.apply_to_uncond, cfg.collect_stats,
+                               attention_type=cfg.attention_type, beta=cfg.beta, probe_betas=probe_betas, probe_entmax=probe_entmax, lambda_sharp=cfg.lambda_sharp)
     procs = unet.attn_processors
     attn2_classes = sorted({type(p).__name__ for n, p in procs.items() if n.endswith("attn2.processor")})
     attn1_classes = sorted({type(p).__name__ for n, p in procs.items() if n.endswith("attn1.processor")})
@@ -115,7 +116,14 @@ def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = Non
         torch.cuda.synchronize(); runtime = time.perf_counter() - t0
         peak_mem_gb = torch.cuda.max_memory_allocated() / 2**30
         cast_stats = {n: {"calls": p.calls, "mean_sparse_support": p.mean_sparse_support,
-                          "mean_sparse_support_cond_half": p.mean_sparse_support_cond}
+                          "mean_sparse_support_cond_half": p.mean_sparse_support_cond,
+                          "mean_entropy_cond": p.mean_entropy, "mean_entropy_sparse_cond": p.mean_entropy_sparse,
+                          "entropy_by_step": p.entropy_calls if cfg.collect_stats else None,
+                          "probe_entropy_by_step": {str(b): v for b, v in p.probe_entropy_calls.items()} if p.probe_betas else None,
+                          "probe_entmax_entropy_by_step": p.probe_entmax_entropy_calls if p.probe_entmax else None,
+                          "probe_entmax_support_by_step": p.probe_entmax_support_calls if p.probe_entmax else None,
+                          "sharp_mix": ({"entropy_sharp_endpoint_by_step": p.entropy_sharp_endpoint_calls, "neg_fraction_by_step": p.neg_fraction_calls,
+                                         "neg_mass_by_step": p.neg_mass_calls, "min_weight_by_step": p.min_weight_calls} if p.attention_type == "sharp_mix" else None)}
                       for n, p in cast_processors(unet).items()}
     finally:
         if originals:
@@ -131,7 +139,7 @@ def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = Non
     }
     manifest = {
         "config": cfg.to_dict(),
-        "alpha": cfg.alpha, "lam": cfg.lam,
+        "alpha": cfg.alpha, "lam": cfg.lam, "attention_type": cfg.attention_type, "beta": cfg.beta, "lambda_sharp": cfg.lambda_sharp,
         "initial_latents": None if initial_latents is None else {
             "sha256": _tensor_digest(initial_latents), "shape": list(initial_latents.shape),
             "dtype": str(initial_latents.dtype), "mean": float(initial_latents.float().mean()), "std": float(initial_latents.float().std())},

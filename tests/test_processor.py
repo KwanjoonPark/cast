@@ -138,3 +138,76 @@ def test_full_unet_forward_counts_and_parity(unet):
         assert all(not isinstance(p, CastCrossAttnProcessor) for p in unet.attn_processors.values())
     finally:
         torch.backends.cudnn.allow_tf32 = tf32_prev
+
+
+def test_sharp_softmax_beta1_bitwise_equals_lambda0_and_beta2_differs(unet):
+    """Sharp Softmax beta=1 must be bitwise identical to the validated entmax_mix lambda=0 path (same code up to a
+    multiplication by 1.0); beta=2 must differ on conditioned rows and be a no-op on the zero-conditioned row."""
+    sel = select_cross_attention(unet)
+    g = torch.Generator(device=DEV).manual_seed(3)
+    for n in ["down_blocks.0.attentions.0.transformer_blocks.0.attn2.processor", "mid_block.attentions.0.transformer_blocks.0.attn2.processor"]:
+        mod = sel[n]; C = mod.to_q.in_features; N = 64 if n.startswith("mid") else 4096
+        for dtype in [torch.float32] + ([torch.float16] if DEV == "cuda" else []):
+            od = next(mod.parameters()).dtype; mod.to(dtype)
+            h = torch.randn(2, N, C, generator=g, device=DEV, dtype=dtype); e = torch.randn(2, 77, 768, generator=g, device=DEV, dtype=dtype); e[0] = 0
+            with torch.no_grad():
+                lam0 = CastCrossAttnProcessor(alpha=1.5, lam=0.0)(mod, h, e)
+                b1 = CastCrossAttnProcessor(attention_type="softmax", beta=1.0)(mod, h, e)
+                b2 = CastCrossAttnProcessor(attention_type="softmax", beta=2.0)(mod, h, e)
+                ref = AttnProcessor2_0()(mod, h, e)
+            mod.to(od)
+            assert torch.equal(b1, lam0), f"beta=1 != lambda=0 ({n}, {dtype})"
+            assert (b1.float() - ref.float()).abs().max() < (1e-4 if dtype == torch.float32 else 2e-2) * max(float(ref.float().std()), 1e-3) * 10
+            assert (b2[1].float() - b1[1].float()).abs().max() > 0
+            assert torch.equal(b2[0], b1[0])                               # K=V=0 row: softmax of zeros is uniform for any beta
+
+
+def test_entropy_stats_and_probes(unet):
+    sel = select_cross_attention(unet); mod = sel["down_blocks.1.attentions.0.transformer_blocks.0.attn2.processor"]
+    g = torch.Generator(device=DEV).manual_seed(4)
+    h = torch.randn(2, 1024, 640, generator=g, device=DEV); e = torch.randn(2, 77, 768, generator=g, device=DEV); e[0] = 0
+    import math
+    with torch.no_grad():
+        p1 = CastCrossAttnProcessor(attention_type="softmax", beta=1.0, collect_stats=True, probe_betas=(1.0, 2.0), probe_entmax=True); p1(mod, h, e)
+        p2 = CastCrossAttnProcessor(attention_type="softmax", beta=2.0, collect_stats=True); p2(mod, h, e)
+        pe = CastCrossAttnProcessor(alpha=1.5, lam=1.0, collect_stats=True); pe(mod, h, e)
+    H1, H2 = p1.mean_entropy, p2.mean_entropy
+    assert 0 < H2 < H1 <= math.log(77) + 1e-6                             # sharpening lowers entropy; bounded by log(S)
+    assert abs(p1.probe_entropy_calls[1.0][0] - H1) < 1e-6                 # probe at beta=1 equals the run statistic
+    assert abs(p1.probe_entropy_calls[2.0][0] - H2) < 1e-5                 # probe at beta=2 equals the beta=2 run statistic (same logits)
+    assert abs(p1.probe_entmax_entropy_calls[0] - pe.mean_entropy_sparse) < 1e-5 and abs(p1.probe_entmax_support_calls[0] - pe.mean_sparse_support_cond) < 1e-5
+    assert pe.mean_entropy_sparse < pe.mean_entropy                        # entmax map is more concentrated than the dense map on the same logits
+    assert math.exp(pe.mean_entropy_sparse) <= pe.mean_sparse_support_cond + 1e-6   # effective support <= exact support (per row, Jensen-safe on means only approx) 
+
+
+def test_sharp_mix_algebra_and_parity(unet):
+    """sharp_mix: lambda_sharp=0 bitwise == dense (lam=0 path), =1 bitwise == softmax(beta=1.5); 0.5 == 0.5*dense+0.5*sharp
+    (via outputs: linear in W); rows sum to 1; non-negative for lambda_sharp<=1; signed allowed for >1 (not clamped)."""
+    from cast.attention.sparse_ops import dense_softmax, mix_attention_weights
+    sel = select_cross_attention(unet); mod = sel["down_blocks.0.attentions.0.transformer_blocks.0.attn2.processor"]
+    g = torch.Generator(device=DEV).manual_seed(5)
+    h = torch.randn(2, 4096, 320, generator=g, device=DEV); e = torch.randn(2, 77, 768, generator=g, device=DEV); e[0] = 0
+    with torch.no_grad():
+        dense = CastCrossAttnProcessor(alpha=1.5, lam=0.0)(mod, h, e)
+        sharp = CastCrossAttnProcessor(attention_type="softmax", beta=1.5)(mod, h, e)
+        m0 = CastCrossAttnProcessor(attention_type="sharp_mix", beta=1.5, lambda_sharp=0.0)(mod, h, e)
+        m1 = CastCrossAttnProcessor(attention_type="sharp_mix", beta=1.5, lambda_sharp=1.0)(mod, h, e)
+        p05 = CastCrossAttnProcessor(attention_type="sharp_mix", beta=1.5, lambda_sharp=0.5, collect_stats=True); m05 = p05(mod, h, e)
+        p15 = CastCrossAttnProcessor(attention_type="sharp_mix", beta=1.5, lambda_sharp=1.5, collect_stats=True); m15 = p15(mod, h, e)
+    assert torch.equal(m0, dense) and torch.equal(m1, sharp)
+    assert (m05 - (0.5 * dense + 0.5 * sharp)).abs().max() < 1e-4 * max(float(dense.std()), 1e-3) * 10     # output linear in W
+    # weight-level algebra on the same logits
+    q = mod.to_q(h); k = mod.to_k(e); H, d = mod.heads, q.shape[-1] // mod.heads
+    q = q.view(2, -1, H, d).transpose(1, 2).float(); k = k.view(2, -1, H, d).transpose(1, 2).float()
+    Z = torch.matmul(q, k.transpose(-1, -2)) * mod.scale; Wd, Ws = dense_softmax(Z), dense_softmax(1.5 * Z)
+    for ls in [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5]:
+        W = mix_attention_weights(Wd, Ws, ls)
+        assert (W.sum(-1) - 1).abs().max() < 1e-4
+        if ls <= 1.0: assert W.min() >= -1e-6
+    # negative entries at lambda_sharp>1 are possible, not guaranteed (random-init logits are nearly flat); check on sharper logits
+    Zs = Z * 8; Wd8, Ws8 = dense_softmax(Zs), dense_softmax(1.5 * Zs); W15 = mix_attention_weights(Wd8, Ws8, 1.5)
+    assert W15.min() < 0 and (W15.sum(-1) - 1).abs().max() < 1e-4                           # signed extrapolation, rows still sum to 1
+    assert mix_attention_weights(Wd8, Ws8, 1.0).min() >= 0 and mix_attention_weights(Wd8, Ws8, 0.75).min() >= -1e-6
+    assert p05.min_weight_calls[0] >= -1e-6 and p05.neg_mass_calls[0] < 1e-6 and p05.entropy_calls
+    assert len(p15.neg_fraction_calls) == 1 and len(p15.neg_mass_calls) == 1 and not p15.entropy_calls   # diagnostics recorded; no entropy on possibly-signed weights
+    assert abs(p15.entropy_sharp_endpoint_calls[0] - p05.entropy_sharp_endpoint_calls[0]) < 1e-6          # endpoint reference identical
