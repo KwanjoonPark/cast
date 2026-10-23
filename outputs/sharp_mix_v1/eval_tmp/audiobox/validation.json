@@ -1,0 +1,42 @@
+{
+  "info": {
+    "package_version": "unknown",
+    "torch": "2.4.1+cu124",
+    "cuda": "12.4",
+    "device": "cuda",
+    "predictor_class": "AesPredictor",
+    "checkpoint": null,
+    "infer_source_mentions_resample": true,
+    "infer_source_sample_rate_tokens": [
+      "16000",
+      "sample_rate",
+      "sr"
+    ],
+    "input_audio": "original Auffusion 16 kHz mono int16 wav, passed as file path (package handles loading/resampling)",
+    "model_dtype": "torch.float32"
+  },
+  "validation": {
+    "sample": "outputs/sharp_mix_v1/A_DISCRETE_SINGLE/A01/seed_42/lambda_sharp_0.25/audio.wav",
+    "repeats": [
+      {
+        "CE": 3.797895908355713,
+        "CU": 6.737855434417725,
+        "PC": 2.54172945022583,
+        "PQ": 6.8972392082214355
+      },
+      {
+        "CE": 3.797895908355713,
+        "CU": 6.737855434417725,
+        "PC": 2.54172945022583,
+        "PQ": 6.8972392082214355
+      },
+      {
+        "CE": 3.797895908355713,
+        "CU": 6.737855434417725,
+        "PC": 2.54172945022583,
+        "PQ": 6.8972392082214355
+      }
+    ],
+    "max_abs_diff": 0.0
+  }
+}

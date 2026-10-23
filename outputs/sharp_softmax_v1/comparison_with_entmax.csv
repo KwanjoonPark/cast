@@ -1,0 +1,33 @@
+family,control_parameter,value,category,mean_clap,mean_delta_vs_dense,ci95_delta_lo,ci95_delta_hi,concentration_stat,concentration_value,concentration_source
+sharp_softmax,beta,1.0,DISCRETE_SINGLE,0.5038766910632452,0.0,0.0,0.0,softmax_effective_support_exp(H),19.268323565116088,measured on own trajectory
+sharp_softmax,beta,1.25,DISCRETE_SINGLE,0.5057785544130536,0.0019018633498085876,-0.03681322104401059,0.032283302810457014,softmax_effective_support_exp(H),8.248571034979529,measured on own trajectory
+sharp_softmax,beta,1.5,DISCRETE_SINGLE,0.5039602013097869,8.351024654176653e-05,-0.03991698639260398,0.035686870416005455,softmax_effective_support_exp(H),4.034259371816728,measured on own trajectory
+sharp_softmax,beta,2.0,DISCRETE_SINGLE,0.4840508666303423,-0.019825824432902865,-0.08680926180548139,0.03330657217237685,softmax_effective_support_exp(H),1.867338943511837,measured on own trajectory
+entmax_mix,lambda,0.0,DISCRETE_SINGLE,0.5038766910632452,0.0,0.0,0.0,entmax_exact_support (W_sparse),,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,0.5,DISCRETE_SINGLE,0.5157464543978373,0.011869763334592184,-0.017230754097302754,0.03784356514612834,entmax_exact_support (W_sparse),2.5364100964549348,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,1.0,DISCRETE_SINGLE,0.47437868929571575,-0.02949800176752938,-0.1012086561984486,0.031031666530503165,entmax_exact_support (W_sparse),2.565037503100858,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,2.0,DISCRETE_SINGLE,0.3345638977156746,-0.16931279334757063,-0.24935668872462377,-0.09879270609882145,entmax_exact_support (W_sparse),2.636566059030715,measured on own trajectory (Diagnostic V1)
+sharp_softmax,beta,1.0,DIFFUSE_SINGLE,0.5314722640646828,0.0,0.0,0.0,softmax_effective_support_exp(H),17.595436274351858,measured on own trajectory
+sharp_softmax,beta,1.25,DIFFUSE_SINGLE,0.5188383567664359,-0.012633907298247019,-0.04244117852714326,0.018129709694120616,softmax_effective_support_exp(H),7.825401843634225,measured on own trajectory
+sharp_softmax,beta,1.5,DIFFUSE_SINGLE,0.5084104339281718,-0.023061830136511058,-0.057060875826411776,0.017405536439683705,softmax_effective_support_exp(H),3.9792896751108278,measured on own trajectory
+sharp_softmax,beta,2.0,DIFFUSE_SINGLE,0.5008309814665052,-0.030641282598177593,-0.07018174562189314,0.024047510491477117,softmax_effective_support_exp(H),1.925758024321861,measured on own trajectory
+entmax_mix,lambda,0.0,DIFFUSE_SINGLE,0.5314722640646828,0.0,0.0,0.0,entmax_exact_support (W_sparse),,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,0.5,DIFFUSE_SINGLE,0.5125759210851457,-0.018896342979537115,-0.056700076907873154,0.01802267465326521,entmax_exact_support (W_sparse),2.5364100964549348,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,1.0,DIFFUSE_SINGLE,0.48128726416163975,-0.050184999903043113,-0.09316740764511956,-0.0008141183190875622,entmax_exact_support (W_sparse),2.565037503100858,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,2.0,DIFFUSE_SINGLE,0.3028048823277156,-0.2286673817369673,-0.29600105683008826,-0.1544765639636252,entmax_exact_support (W_sparse),2.636566059030715,measured on own trajectory (Diagnostic V1)
+sharp_softmax,beta,1.0,DISCRETE_DISCRETE,0.5700252966748344,0.0,0.0,0.0,softmax_effective_support_exp(H),18.895987986905634,measured on own trajectory
+sharp_softmax,beta,1.25,DISCRETE_DISCRETE,0.558740547961659,-0.011284748713175455,-0.027361717489030626,0.004849362704488965,softmax_effective_support_exp(H),8.39857120219668,measured on own trajectory
+sharp_softmax,beta,1.5,DISCRETE_DISCRETE,0.5374871426158482,-0.03253815405898624,-0.05515778395864699,-0.009474875902136165,softmax_effective_support_exp(H),4.243551731603089,measured on own trajectory
+sharp_softmax,beta,2.0,DISCRETE_DISCRETE,0.5133711066510942,-0.056654190023740135,-0.09197341071234809,-0.020388555195596486,softmax_effective_support_exp(H),1.9971828033278076,measured on own trajectory
+entmax_mix,lambda,0.0,DISCRETE_DISCRETE,0.5700252966748344,0.0,0.0,0.0,entmax_exact_support (W_sparse),,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,0.5,DISCRETE_DISCRETE,0.5500855131281747,-0.019939783546659682,-0.037872529692120016,-0.0020294619931115043,entmax_exact_support (W_sparse),2.5364100964549348,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,1.0,DISCRETE_DISCRETE,0.49271944827503633,-0.07730584839979808,-0.1363403962718116,-0.025257200002670288,entmax_exact_support (W_sparse),2.565037503100858,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,2.0,DISCRETE_DISCRETE,0.36813777436812717,-0.20188752230670717,-0.27430088900857497,-0.1374455557929145,entmax_exact_support (W_sparse),2.636566059030715,measured on own trajectory (Diagnostic V1)
+sharp_softmax,beta,1.0,DISCRETE_DIFFUSE,0.61553269955847,0.0,0.0,0.0,softmax_effective_support_exp(H),18.731012766874446,measured on own trajectory
+sharp_softmax,beta,1.25,DISCRETE_DIFFUSE,0.6001683738496569,-0.015364325708813138,-0.023740847905476887,-0.005659498522679029,softmax_effective_support_exp(H),8.24437046001932,measured on own trajectory
+sharp_softmax,beta,1.5,DISCRETE_DIFFUSE,0.588649579220348,-0.02688312033812205,-0.031847958763440445,-0.021830971042315166,softmax_effective_support_exp(H),4.125718694820692,measured on own trajectory
+sharp_softmax,beta,2.0,DISCRETE_DIFFUSE,0.5794690830840005,-0.036063616474469505,-0.06005456381373935,-0.0017111284865273357,softmax_effective_support_exp(H),1.9298118937115192,measured on own trajectory
+entmax_mix,lambda,0.0,DISCRETE_DIFFUSE,0.61553269955847,0.0,0.0,0.0,entmax_exact_support (W_sparse),,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,0.5,DISCRETE_DIFFUSE,0.5999051680167516,-0.015627531541718375,-0.028890301783879604,-0.002875179052352905,entmax_exact_support (W_sparse),2.5364100964549348,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,1.0,DISCRETE_DIFFUSE,0.5603620020879639,-0.055170697470506035,-0.09031210839748383,-0.00875238577524821,entmax_exact_support (W_sparse),2.565037503100858,measured on own trajectory (Diagnostic V1)
+entmax_mix,lambda,2.0,DISCRETE_DIFFUSE,0.4492886480357912,-0.1662440515226788,-0.23086177971627977,-0.1008256326119105,entmax_exact_support (W_sparse),2.636566059030715,measured on own trajectory (Diagnostic V1)

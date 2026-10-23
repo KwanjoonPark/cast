@@ -1,0 +1,1586 @@
+{
+  "A01_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_42/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A01/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A01_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_123/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A01/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A01_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A01/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A01/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "A02_s42": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_42/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_42/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A02/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A02_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_123/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A02/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A02_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_2026/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_2026/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A02/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A02/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "A03_s42": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_42/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_42/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A03/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A03_s123": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_123/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_123/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A03/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A03_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A03/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A03/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "A04_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_42/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A04/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A04_s123": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_123/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_123/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A04/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A04_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A04/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A04/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "A05_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_42/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_42/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A05/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A05_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A05/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A05_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A05/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A05/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "A06_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A06/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "A06_s123": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A06/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "A06_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/A_DISCRETE_SINGLE/A06/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A06/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B01_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_42/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B01/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B01_s123": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_123/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_123/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B01/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B01_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B01/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B01/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B02_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B02/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B02_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_123/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B02/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B02_s2026": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B02/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B02/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B03_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B03/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B03_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_123/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B03/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B03_s2026": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_2026/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_2026/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B03/seed_2026/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B03/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B04_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_42/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_42/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B04/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B04_s123": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_123/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_123/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B04/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B04_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B04/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B04/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B05_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_42/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B05/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B05_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_123/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B05/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B05_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_2026/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B05/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B05/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "B06_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_42/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B06/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "B06_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B06/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "B06_s2026": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_2026/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_2026/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/B_DIFFUSE_SINGLE/B06/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/B_DIFFUSE_SINGLE/B06/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C01_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C01/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C01_s123": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_123/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C01/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C01_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_2026/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C01/seed_2026/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C01/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C02_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C02/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C02_s123": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C02/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C02_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_2026/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C02/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C02/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C03_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C03/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C03_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_123/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_123/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C03/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C03_s2026": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_2026/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C03/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C03/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C04_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C04/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C04_s123": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C04/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C04_s2026": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C04/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C04/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C05_s42": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C05/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C05_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C05/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C05_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_2026/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_2026/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C05/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C05/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "C06_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_42/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C06/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "C06_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C06/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "C06_s2026": {
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_2026/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/C_DISCRETE_DISCRETE/C06/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/C_DISCRETE_DISCRETE/C06/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D01_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_42/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D01/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D01_s123": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_123/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D01/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D01_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D01/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D01/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D02_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_42/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_42/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D02/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D02_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_123/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D02/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D02_s2026": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_2026/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_2026/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D02/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D02/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D03_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_42/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_42/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D03/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D03_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_123/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D03/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D03_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D03/seed_2026/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D03/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D04_s42": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_42/beta_1.50/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D04/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D04_s123": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_123/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D04/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D04_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_2026/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D04/seed_2026/beta_2.00/audio.wav"
+    },
+    "B": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D04/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D05_s42": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_42/beta_1.00/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_42/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_42/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D05/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D05_s123": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_123/beta_1.00/audio.wav"
+    },
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_123/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_123/beta_2.00/audio.wav"
+    },
+    "C": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D05/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D05_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_2026/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_2026/beta_1.50/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D05/seed_2026/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D05/seed_2026/lambda_1/audio.wav"
+    }
+  },
+  "D06_s42": {
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_42/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_42/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_42/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D06/seed_42/lambda_1/audio.wav"
+    }
+  },
+  "D06_s123": {
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_123/beta_1.00/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_123/beta_1.50/audio.wav"
+    },
+    "D": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_123/beta_2.00/audio.wav"
+    },
+    "A": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D06/seed_123/lambda_1/audio.wav"
+    }
+  },
+  "D06_s2026": {
+    "A": {
+      "family": "sharp_softmax",
+      "beta": 1.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_2026/beta_1.00/audio.wav"
+    },
+    "B": {
+      "family": "sharp_softmax",
+      "beta": 1.5,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_2026/beta_1.50/audio.wav"
+    },
+    "C": {
+      "family": "sharp_softmax",
+      "beta": 2.0,
+      "source": "outputs/sharp_softmax_v1/D_DISCRETE_DIFFUSE/D06/seed_2026/beta_2.00/audio.wav"
+    },
+    "D": {
+      "family": "entmax_mix",
+      "lambda": 1.0,
+      "source": "outputs/diagnostic_v1/D_DISCRETE_DIFFUSE/D06/seed_2026/lambda_1/audio.wav"
+    }
+  }
+}

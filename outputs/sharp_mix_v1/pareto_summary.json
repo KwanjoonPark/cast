@@ -1,0 +1,83 @@
+{
+  "objective": "maximize CLAP, AQAScore, PQ (overall prompt-level means, 24 prompts)",
+  "points": {
+    "0.0": {
+      "type": "Dense",
+      "CLAP": 0.5552267378403081,
+      "AQAScore": 0.9048213666513517,
+      "PQ": 5.922017564376195,
+      "dominated_by": [],
+      "non_dominated": true
+    },
+    "0.25": {
+      "type": "Interpolation",
+      "CLAP": 0.552561089810398,
+      "AQAScore": 0.9088576791837729,
+      "PQ": 5.9021540946430635,
+      "dominated_by": [],
+      "non_dominated": true
+    },
+    "0.5": {
+      "type": "Interpolation",
+      "CLAP": 0.5443167272541258,
+      "AQAScore": 0.9016513961328466,
+      "PQ": 5.862314797110027,
+      "dominated_by": [
+        "0.0",
+        "0.25"
+      ],
+      "non_dominated": false
+    },
+    "0.75": {
+      "type": "Interpolation",
+      "CLAP": 0.5455831974330875,
+      "AQAScore": 0.908378448296301,
+      "PQ": 5.843863315052456,
+      "dominated_by": [
+        "0.25"
+      ],
+      "non_dominated": false
+    },
+    "1.0": {
+      "type": "Full Sharp",
+      "CLAP": 0.5346268392685386,
+      "AQAScore": 0.8916016157669221,
+      "PQ": 5.827880995141136,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "non_dominated": false
+    },
+    "1.25": {
+      "type": "Extrapolation",
+      "CLAP": 0.5272368345823553,
+      "AQAScore": 0.887568940953631,
+      "PQ": 5.750190453396903,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75",
+        "1.0"
+      ],
+      "non_dominated": false
+    },
+    "1.5": {
+      "type": "Extrapolation",
+      "CLAP": 0.5121331248018477,
+      "AQAScore": 0.8926532993020667,
+      "PQ": 5.702371127075619,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "non_dominated": false
+    }
+  },
+  "note": "non-dominated is a trade-off description, not superiority over Dense"
+}

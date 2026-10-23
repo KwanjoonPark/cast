@@ -1,0 +1,252 @@
+{
+  "P01_SINGLE_DOG/lambda_0.00": {
+    "rms_16k": 0.12194079905748367,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.589914858341217
+  },
+  "P01_SINGLE_DOG/lambda_0.25": {
+    "rms_16k": 0.12779247760772705,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.6017757654190063
+  },
+  "P01_SINGLE_DOG/lambda_0.50": {
+    "rms_16k": 0.13109245896339417,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.6250690221786499
+  },
+  "P01_SINGLE_DOG/lambda_0.75": {
+    "rms_16k": 0.17163152992725372,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 1.249999968422344e-05,
+    "clap_unclamped": 0.629059374332428,
+    "clap_clamped": 0.6293695569038391,
+    "clamp_delta": 0.0003101825714111328
+  },
+  "P01_SINGLE_DOG/lambda_1.00": {
+    "rms_16k": 0.20740897953510284,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 3.125000148429535e-05,
+    "clap_unclamped": 0.6546491384506226,
+    "clap_clamped": 0.6539202928543091,
+    "clamp_delta": -0.0007288455963134766
+  },
+  "P01_SINGLE_DOG/lambda_1.50": {
+    "rms_16k": 0.29738849401474,
+    "frac_saturated_16k": 9.375e-05,
+    "frac_overshoot_48k": 0.0008208333165384829,
+    "clap_unclamped": 0.5997507572174072,
+    "clap_clamped": 0.5971025228500366,
+    "clamp_delta": -0.0026482343673706055
+  },
+  "P01_SINGLE_DOG/lambda_2.00": {
+    "rms_16k": 0.2866654694080353,
+    "frac_saturated_16k": 0.00031875,
+    "frac_overshoot_48k": 0.0012395833618938923,
+    "clap_unclamped": 0.55901700258255,
+    "clap_clamped": 0.5560852885246277,
+    "clamp_delta": -0.0029317140579223633
+  },
+  "P02_SINGLE_RAIN/lambda_0.00": {
+    "rms_16k": 0.072898730635643,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 2.2916667148820125e-05,
+    "clap_unclamped": 0.6083961725234985,
+    "clap_clamped": 0.6116050481796265,
+    "clamp_delta": 0.0032088756561279297
+  },
+  "P02_SINGLE_RAIN/lambda_0.25": {
+    "rms_16k": 0.06617973744869232,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 2.0833333110203966e-05,
+    "clap_unclamped": 0.5749895572662354,
+    "clap_clamped": 0.5797027349472046,
+    "clamp_delta": 0.004713177680969238
+  },
+  "P02_SINGLE_RAIN/lambda_0.50": {
+    "rms_16k": 0.06053081899881363,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 1.8750000890577212e-05,
+    "clap_unclamped": 0.5508729219436646,
+    "clap_clamped": 0.5537572503089905,
+    "clamp_delta": 0.0028843283653259277
+  },
+  "P02_SINGLE_RAIN/lambda_0.75": {
+    "rms_16k": 0.05574462562799454,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 1.8750000890577212e-05,
+    "clap_unclamped": 0.5724598169326782,
+    "clap_clamped": 0.5745872855186462,
+    "clamp_delta": 0.0021274685859680176
+  },
+  "P02_SINGLE_RAIN/lambda_1.00": {
+    "rms_16k": 0.05032074451446533,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 1.0416666555101983e-05,
+    "clap_unclamped": 0.38941675424575806,
+    "clap_clamped": 0.39282262325286865,
+    "clamp_delta": 0.0034058690071105957
+  },
+  "P02_SINGLE_RAIN/lambda_1.50": {
+    "rms_16k": 0.040041062980890274,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.41382771730422974
+  },
+  "P02_SINGLE_RAIN/lambda_2.00": {
+    "rms_16k": 0.02978174015879631,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.3546163737773895
+  },
+  "P03_TWO_DOG_RAIN/lambda_0.00": {
+    "rms_16k": 0.06927822530269623,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.6721561551094055
+  },
+  "P03_TWO_DOG_RAIN/lambda_0.25": {
+    "rms_16k": 0.06924097239971161,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.6726377010345459
+  },
+  "P03_TWO_DOG_RAIN/lambda_0.50": {
+    "rms_16k": 0.0652695894241333,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.6582632064819336
+  },
+  "P03_TWO_DOG_RAIN/lambda_0.75": {
+    "rms_16k": 0.07052331417798996,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.663341760635376
+  },
+  "P03_TWO_DOG_RAIN/lambda_1.00": {
+    "rms_16k": 0.07115866243839264,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.643550455570221
+  },
+  "P03_TWO_DOG_RAIN/lambda_1.50": {
+    "rms_16k": 0.08461491018533707,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.5918772220611572
+  },
+  "P03_TWO_DOG_RAIN/lambda_2.00": {
+    "rms_16k": 0.14897571504116058,
+    "frac_saturated_16k": 3.75e-05,
+    "frac_overshoot_48k": 8.541666466044262e-05,
+    "clap_unclamped": 0.4975910782814026,
+    "clap_clamped": 0.49835434556007385,
+    "clamp_delta": 0.0007632672786712646
+  },
+  "P04_TWO_SPEECH_HORN/lambda_0.00": {
+    "rms_16k": 0.14871975779533386,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.8094769716262817
+  },
+  "P04_TWO_SPEECH_HORN/lambda_0.25": {
+    "rms_16k": 0.16059088706970215,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.8071838617324829
+  },
+  "P04_TWO_SPEECH_HORN/lambda_0.50": {
+    "rms_16k": 0.18668490648269653,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 3.125000148429535e-05,
+    "clap_unclamped": 0.8014720678329468,
+    "clap_clamped": 0.8014477491378784,
+    "clamp_delta": -2.4318695068359375e-05
+  },
+  "P04_TWO_SPEECH_HORN/lambda_0.75": {
+    "rms_16k": 0.1988738626241684,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 5.208333459449932e-05,
+    "clap_unclamped": 0.7894501090049744,
+    "clap_clamped": 0.790037214756012,
+    "clamp_delta": 0.0005871057510375977
+  },
+  "P04_TWO_SPEECH_HORN/lambda_1.00": {
+    "rms_16k": 0.20502933859825134,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 7.083333184709772e-05,
+    "clap_unclamped": 0.7777099609375,
+    "clap_clamped": 0.7778818011283875,
+    "clamp_delta": 0.00017184019088745117
+  },
+  "P04_TWO_SPEECH_HORN/lambda_1.50": {
+    "rms_16k": 0.21459920704364777,
+    "frac_saturated_16k": 0.0001,
+    "frac_overshoot_48k": 0.00015624999650754035,
+    "clap_unclamped": 0.7323538064956665,
+    "clap_clamped": 0.7323675155639648,
+    "clamp_delta": 1.3709068298339844e-05
+  },
+  "P04_TWO_SPEECH_HORN/lambda_2.00": {
+    "rms_16k": 0.21136829257011414,
+    "frac_saturated_16k": 0.0001,
+    "frac_overshoot_48k": 9.791666525416076e-05,
+    "clap_unclamped": 0.6165784597396851,
+    "clap_clamped": 0.6167570352554321,
+    "clamp_delta": 0.0001785755157470703
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.00": {
+    "rms_16k": 0.0385158434510231,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.5628498196601868
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.25": {
+    "rms_16k": 0.04054506495594978,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 0.0,
+    "clap_unclamped": 0.5710644721984863
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.50": {
+    "rms_16k": 0.044672369956970215,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 6.24999984211172e-06,
+    "clap_unclamped": 0.5688909292221069,
+    "clap_clamped": 0.5691042542457581,
+    "clamp_delta": 0.00021332502365112305
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.75": {
+    "rms_16k": 0.04827175661921501,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 2.0833333110203966e-05,
+    "clap_unclamped": 0.5409971475601196,
+    "clap_clamped": 0.5407170653343201,
+    "clamp_delta": -0.00028008222579956055
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_1.00": {
+    "rms_16k": 0.05449791997671127,
+    "frac_saturated_16k": 0.0,
+    "frac_overshoot_48k": 2.499999936844688e-05,
+    "clap_unclamped": 0.523607611656189,
+    "clap_clamped": 0.5210886001586914,
+    "clamp_delta": -0.0025190114974975586
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_1.50": {
+    "rms_16k": 0.06245068460702896,
+    "frac_saturated_16k": 6.25e-06,
+    "frac_overshoot_48k": 9.375000081490725e-05,
+    "clap_unclamped": 0.21864423155784607,
+    "clap_clamped": 0.21655139327049255,
+    "clamp_delta": -0.0020928382873535156
+  },
+  "P05_TWO_FOOTSTEPS_BIRDS/lambda_2.00": {
+    "rms_16k": 0.09330323338508606,
+    "frac_saturated_16k": 3.75e-05,
+    "frac_overshoot_48k": 0.00018124999769497663,
+    "clap_unclamped": 0.20218044519424438,
+    "clap_clamped": 0.201925128698349,
+    "clamp_delta": -0.00025531649589538574
+  }
+}

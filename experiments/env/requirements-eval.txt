@@ -1,0 +1,16 @@
+# CAST evaluation environment (AQAScore via Qwen2.5-Omni + AudioBox Aesthetics). Python 3.10. Separate from the frozen `cast` env.
+# torch/torchaudio installed from the cu124 index (see setup_eval_env.sh)
+torch==2.4.1
+torchaudio==2.4.1
+torchvision==0.19.1
+transformers==4.57.1
+accelerate==1.1.1
+huggingface_hub==0.36.2
+audiobox_aesthetics
+soundfile==0.12.1
+librosa==0.10.2.post1
+scipy==1.13.1
+numpy==1.26.4
+pandas==2.2.3
+matplotlib==3.9.2
+pyyaml==6.0.2

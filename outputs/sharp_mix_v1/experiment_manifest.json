@@ -1,0 +1,82 @@
+{
+  "experiment": "cast_sharp_mix_v1",
+  "builds_on": [
+    "outputs/diagnostic_v1",
+    "outputs/sharp_softmax_v1"
+  ],
+  "prompt_file": "experiments/prompts/cast_diagnostic_v1.json",
+  "prompt_file_sha256": "c89ac1351381c16b7d85c84569543a615af52cdb5ba17bef812e350325968d38",
+  "n_prompts": 24,
+  "attention_type": "sharp_mix",
+  "beta": 1.5,
+  "lambda_sharps": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+  ],
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "initial_latent_sha256_by_seed": {
+    "42": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+    "123": "6e34569f4966d4fd47193dea7ee57dbb50e0459a15d017fd6d3d51791d3d7fa3",
+    "2026": "5ea8d1c0cee830db6eaef8d0105bc3a2868f497151e1b4b95c5062640b099823"
+  },
+  "generation_settings": {
+    "checkpoint": "auffusion/auffusion",
+    "num_inference_steps": 100,
+    "guidance_scale": 7.5,
+    "height": 256,
+    "width": 1024,
+    "dtype": "float16",
+    "autocast": true,
+    "device": "cuda",
+    "apply_to_uncond": true,
+    "collect_stats": true,
+    "deterministic_self_attn": true
+  },
+  "stock_processor_classes": [
+    "AttnProcessor2_0"
+  ],
+  "versions": {
+    "python": "3.10.20",
+    "torch": "2.0.1+cu118",
+    "cuda_runtime": "11.8",
+    "cudnn": "8700",
+    "gpu": "NVIDIA RTX A5000",
+    "diffusers": "0.18.2",
+    "transformers": "4.31.0",
+    "huggingface_hub": "0.16.4",
+    "entmax": "1.3",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1"
+  },
+  "expected_conditions": 504,
+  "created": "2026-10-23 02:50:42",
+  "checks": {
+    "endpoint_regeneration": {
+      "D01/seed_42/lambda_sharp_0.00": {
+        "reference": "sharp_softmax_v1 beta=1.00 (== diagnostic lambda_entmax=0)",
+        "final_latent_sha_equal": true,
+        "audio_sha_equal": true
+      },
+      "A01/seed_42/lambda_sharp_1.00": {
+        "reference": "sharp_softmax_v1 beta=1.50",
+        "final_latent_sha_equal": true,
+        "audio_sha_equal": true
+      },
+      "D01/seed_2026/lambda_sharp_1.00": {
+        "reference": "sharp_softmax_v1 beta=1.50",
+        "final_latent_sha_equal": true,
+        "audio_sha_equal": true
+      }
+    }
+  },
+  "terminology": "lambda_sharp (this experiment) != lambda_entmax (Diagnostic V1 `lam`); beta=1.5 is the fixed Sharp Softmax endpoint"
+}

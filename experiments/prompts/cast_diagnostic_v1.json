@@ -1,0 +1,36 @@
+{
+  "name": "cast_diagnostic_v1",
+  "description": "Frozen 2x2 diagnostic prompt set: event type (discrete vs diffuse) x composition (single vs two events). 24 prompts, 6 per category. Frozen before generation; never edited after results are seen.",
+  "categories": {
+    "A": "DISCRETE_SINGLE",
+    "B": "DIFFUSE_SINGLE",
+    "C": "DISCRETE_DISCRETE",
+    "D": "DISCRETE_DIFFUSE"
+  },
+  "prompts": [
+    {"id": "A01", "category": "DISCRETE_SINGLE", "prompt": "A dog barking loudly.", "events": ["dog barking"]},
+    {"id": "A02", "category": "DISCRETE_SINGLE", "prompt": "A glass bottle shattering on the floor.", "events": ["glass bottle shattering"]},
+    {"id": "A03", "category": "DISCRETE_SINGLE", "prompt": "A car horn honking loudly.", "events": ["car horn honking"]},
+    {"id": "A04", "category": "DISCRETE_SINGLE", "prompt": "A telephone ringing.", "events": ["telephone ringing"]},
+    {"id": "A05", "category": "DISCRETE_SINGLE", "prompt": "A wooden door slamming shut.", "events": ["door slamming"]},
+    {"id": "A06", "category": "DISCRETE_SINGLE", "prompt": "A metal pan crashing onto the floor.", "events": ["metal pan crashing"]},
+    {"id": "B01", "category": "DIFFUSE_SINGLE", "prompt": "Steady rain falling on a roof.", "events": ["rain falling"]},
+    {"id": "B02", "category": "DIFFUSE_SINGLE", "prompt": "Strong wind blowing through trees.", "events": ["wind blowing"]},
+    {"id": "B03", "category": "DIFFUSE_SINGLE", "prompt": "Ocean waves washing onto the shore.", "events": ["ocean waves"]},
+    {"id": "B04", "category": "DIFFUSE_SINGLE", "prompt": "A fire crackling steadily in a fireplace.", "events": ["fire crackling"]},
+    {"id": "B05", "category": "DIFFUSE_SINGLE", "prompt": "Water flowing continuously through a stream.", "events": ["water flowing"]},
+    {"id": "B06", "category": "DIFFUSE_SINGLE", "prompt": "A crowd murmuring continuously in a large room.", "events": ["crowd murmuring"]},
+    {"id": "C01", "category": "DISCRETE_DISCRETE", "prompt": "A dog barking while a car horn honks nearby.", "events": ["dog barking", "car horn honking"]},
+    {"id": "C02", "category": "DISCRETE_DISCRETE", "prompt": "A telephone ringing while someone knocks on a door.", "events": ["telephone ringing", "knocking on a door"]},
+    {"id": "C03", "category": "DISCRETE_DISCRETE", "prompt": "A man speaking while a bell rings nearby.", "events": ["man speaking", "bell ringing"]},
+    {"id": "C04", "category": "DISCRETE_DISCRETE", "prompt": "A glass bottle shattering while people clap their hands.", "events": ["glass bottle shattering", "people clapping"]},
+    {"id": "C05", "category": "DISCRETE_DISCRETE", "prompt": "Footsteps on a wooden floor while a door repeatedly slams.", "events": ["footsteps on a wooden floor", "door slamming"]},
+    {"id": "C06", "category": "DISCRETE_DISCRETE", "prompt": "A baby crying while a telephone rings.", "events": ["baby crying", "telephone ringing"]},
+    {"id": "D01", "category": "DISCRETE_DIFFUSE", "prompt": "A dog barking while rain falls in the background.", "events": ["dog barking", "rain falling"], "foreground_event": "dog barking", "background_event": "rain falling"},
+    {"id": "D02", "category": "DISCRETE_DIFFUSE", "prompt": "A man speaking while traffic noise continues in the background.", "events": ["man speaking", "traffic noise"], "foreground_event": "man speaking", "background_event": "traffic noise"},
+    {"id": "D03", "category": "DISCRETE_DIFFUSE", "prompt": "A telephone ringing while a vacuum cleaner runs in the background.", "events": ["telephone ringing", "vacuum cleaner running"], "foreground_event": "telephone ringing", "background_event": "vacuum cleaner running"},
+    {"id": "D04", "category": "DISCRETE_DIFFUSE", "prompt": "A car horn honking while an engine idles in the background.", "events": ["car horn honking", "engine idling"], "foreground_event": "car horn honking", "background_event": "engine idling"},
+    {"id": "D05", "category": "DISCRETE_DIFFUSE", "prompt": "A baby crying while wind blows through trees in the background.", "events": ["baby crying", "wind blowing through trees"], "foreground_event": "baby crying", "background_event": "wind blowing through trees"},
+    {"id": "D06", "category": "DISCRETE_DIFFUSE", "prompt": "A door slamming while a crowd murmurs in the background.", "events": ["door slamming", "crowd murmuring"], "foreground_event": "door slamming", "background_event": "crowd murmuring"}
+  ]
+}

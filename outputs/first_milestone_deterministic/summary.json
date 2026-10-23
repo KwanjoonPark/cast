@@ -1,0 +1,619 @@
+{
+  "checks": {
+    "processors_total": 32,
+    "attn2_selected": 16,
+    "stock_processor_classes": [
+      "AttnProcessor2_0"
+    ],
+    "processors_restored": true,
+    "same_initial_latents": true
+  },
+  "runs": {
+    "golden": {
+      "config": {
+        "checkpoint": "auffusion/auffusion",
+        "prompt": "A dog barking while rain falls in the background.",
+        "seed": 42,
+        "num_inference_steps": 100,
+        "guidance_scale": 7.5,
+        "height": 256,
+        "width": 1024,
+        "dtype": "float16",
+        "autocast": true,
+        "device": "cuda",
+        "mode": "golden",
+        "alpha": null,
+        "lam": null,
+        "apply_to_uncond": true,
+        "collect_stats": true,
+        "deterministic_self_attn": true,
+        "output_dir": "outputs"
+      },
+      "alpha": null,
+      "lam": null,
+      "initial_latents": null,
+      "attention_processor_class": {
+        "attn2": [
+          "AttnProcessor2_0"
+        ],
+        "attn1": [
+          "AttnProcessor2_0"
+        ]
+      },
+      "scheduler": "PNDMScheduler",
+      "versions": {
+        "python": "3.10.20",
+        "torch": "2.0.1+cu118",
+        "cuda_runtime": "11.8",
+        "cudnn": "8700",
+        "gpu": "NVIDIA RTX A5000",
+        "diffusers": "0.18.2",
+        "transformers": "4.31.0",
+        "huggingface_hub": "0.16.4",
+        "entmax": "1.3",
+        "numpy": "1.23.5",
+        "scipy": "1.10.1"
+      },
+      "git_commit": null,
+      "runtime_sec": 7.420826008543372,
+      "peak_cuda_mem_gb": 3.107583522796631,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "final_latent_norm": 76.92134094238281,
+      "final_latents_sha256": "301e16b518e95283a49237f8872f6ee32d94b2ffd167e79fac5f851fc8917bb3",
+      "audio_sha256": "731532038c9072c953a83d70bd7a72bdababc5b91ffc48d2c6b6721a56807c72",
+      "cast_processor_stats": {},
+      "sample_rate": 16000,
+      "out_dir": "outputs/golden_deterministic"
+    },
+    "cast_vanilla": {
+      "config": {
+        "checkpoint": "auffusion/auffusion",
+        "prompt": "A dog barking while rain falls in the background.",
+        "seed": 42,
+        "num_inference_steps": 100,
+        "guidance_scale": 7.5,
+        "height": 256,
+        "width": 1024,
+        "dtype": "float16",
+        "autocast": true,
+        "device": "cuda",
+        "mode": "cast_vanilla",
+        "alpha": 1.5,
+        "lam": 0.0,
+        "apply_to_uncond": true,
+        "collect_stats": true,
+        "deterministic_self_attn": true,
+        "output_dir": "outputs/first_milestone_deterministic"
+      },
+      "alpha": 1.5,
+      "lam": 0.0,
+      "initial_latents": {
+        "sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+        "shape": [
+          1,
+          4,
+          32,
+          128
+        ],
+        "dtype": "torch.float16",
+        "mean": 0.003107805270701647,
+        "std": 0.996928334236145
+      },
+      "attention_processor_class": {
+        "attn2": [
+          "CastCrossAttnProcessor"
+        ],
+        "attn1": [
+          "AttnProcessor2_0"
+        ]
+      },
+      "scheduler": "PNDMScheduler",
+      "versions": {
+        "python": "3.10.20",
+        "torch": "2.0.1+cu118",
+        "cuda_runtime": "11.8",
+        "cudnn": "8700",
+        "gpu": "NVIDIA RTX A5000",
+        "diffusers": "0.18.2",
+        "transformers": "4.31.0",
+        "huggingface_hub": "0.16.4",
+        "entmax": "1.3",
+        "numpy": "1.23.5",
+        "scipy": "1.10.1"
+      },
+      "git_commit": null,
+      "runtime_sec": 7.49080599937588,
+      "peak_cuda_mem_gb": 3.110635280609131,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "final_latent_norm": 76.92259979248047,
+      "final_latents_sha256": "c7129a4b75f4f5dd79668f2205cf196d42a6776783ddf6981eb1e47087121488",
+      "audio_sha256": "30cca9cb58c548b11d9afce157549349eb477afe19cec5e17208fad7df5e7fab",
+      "cast_processor_stats": {
+        "down_blocks.0.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "down_blocks.0.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "down_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "down_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "down_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "down_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.1.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.2.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.3.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.3.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "up_blocks.3.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        },
+        "mid_block.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": null,
+          "mean_sparse_support_cond_half": null
+        }
+      },
+      "sample_rate": 16000,
+      "out_dir": "outputs/first_milestone_deterministic/cast_vanilla"
+    },
+    "cast_sparse": {
+      "config": {
+        "checkpoint": "auffusion/auffusion",
+        "prompt": "A dog barking while rain falls in the background.",
+        "seed": 42,
+        "num_inference_steps": 100,
+        "guidance_scale": 7.5,
+        "height": 256,
+        "width": 1024,
+        "dtype": "float16",
+        "autocast": true,
+        "device": "cuda",
+        "mode": "cast_sparse",
+        "alpha": 1.5,
+        "lam": 1.0,
+        "apply_to_uncond": true,
+        "collect_stats": true,
+        "deterministic_self_attn": true,
+        "output_dir": "outputs/first_milestone_deterministic"
+      },
+      "alpha": 1.5,
+      "lam": 1.0,
+      "initial_latents": {
+        "sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+        "shape": [
+          1,
+          4,
+          32,
+          128
+        ],
+        "dtype": "torch.float16",
+        "mean": 0.003107805270701647,
+        "std": 0.996928334236145
+      },
+      "attention_processor_class": {
+        "attn2": [
+          "CastCrossAttnProcessor"
+        ],
+        "attn1": [
+          "AttnProcessor2_0"
+        ]
+      },
+      "scheduler": "PNDMScheduler",
+      "versions": {
+        "python": "3.10.20",
+        "torch": "2.0.1+cu118",
+        "cuda_runtime": "11.8",
+        "cudnn": "8700",
+        "gpu": "NVIDIA RTX A5000",
+        "diffusers": "0.18.2",
+        "transformers": "4.31.0",
+        "huggingface_hub": "0.16.4",
+        "entmax": "1.3",
+        "numpy": "1.23.5",
+        "scipy": "1.10.1"
+      },
+      "git_commit": null,
+      "runtime_sec": 9.457768921740353,
+      "peak_cuda_mem_gb": 3.111642360687256,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "final_latent_norm": 77.76375579833984,
+      "final_latents_sha256": "1ed84809b49bcceb9d65a91a5d2cc2932b214e01e509c148dbc87727b2646dbc",
+      "audio_sha256": "6f78b36fa5db087c1c88bf4da7a5be7541be8c881b3093ae9ae12d64a6d3a049",
+      "cast_processor_stats": {
+        "down_blocks.0.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.371221863397274,
+          "mean_sparse_support_cond_half": 1.7424437267945545
+        },
+        "down_blocks.0.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.47191687857751,
+          "mean_sparse_support_cond_half": 1.9438337571550124
+        },
+        "down_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.75603764600093,
+          "mean_sparse_support_cond_half": 2.5120752920018563
+        },
+        "down_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.495589152421104,
+          "mean_sparse_support_cond_half": 1.991178304842203
+        },
+        "down_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.807385133044555,
+          "mean_sparse_support_cond_half": 2.614770266089109
+        },
+        "down_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 40.02482015779703,
+          "mean_sparse_support_cond_half": 3.0496403155940595
+        },
+        "up_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 40.00346873066213,
+          "mean_sparse_support_cond_half": 3.006937461324257
+        },
+        "up_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.83416566754332,
+          "mean_sparse_support_cond_half": 2.668331335086634
+        },
+        "up_blocks.1.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.74668113784035,
+          "mean_sparse_support_cond_half": 2.4933622756806932
+        },
+        "up_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.732516147122524,
+          "mean_sparse_support_cond_half": 2.4650322942450495
+        },
+        "up_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.854700069616335,
+          "mean_sparse_support_cond_half": 2.7094001392326734
+        },
+        "up_blocks.2.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.523337184792695,
+          "mean_sparse_support_cond_half": 2.046674369585396
+        },
+        "up_blocks.3.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.783206750850866,
+          "mean_sparse_support_cond_half": 2.566413501701733
+        },
+        "up_blocks.3.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.50870853839535,
+          "mean_sparse_support_cond_half": 2.0174170767906867
+        },
+        "up_blocks.3.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.452279119208306,
+          "mean_sparse_support_cond_half": 1.904558238416615
+        },
+        "mid_block.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.856319616336634,
+          "mean_sparse_support_cond_half": 2.712639232673267
+        }
+      },
+      "sample_rate": 16000,
+      "out_dir": "outputs/first_milestone_deterministic/cast_sparse"
+    },
+    "cast_pladis": {
+      "config": {
+        "checkpoint": "auffusion/auffusion",
+        "prompt": "A dog barking while rain falls in the background.",
+        "seed": 42,
+        "num_inference_steps": 100,
+        "guidance_scale": 7.5,
+        "height": 256,
+        "width": 1024,
+        "dtype": "float16",
+        "autocast": true,
+        "device": "cuda",
+        "mode": "cast_pladis",
+        "alpha": 1.5,
+        "lam": 2.0,
+        "apply_to_uncond": true,
+        "collect_stats": true,
+        "deterministic_self_attn": true,
+        "output_dir": "outputs/first_milestone_deterministic"
+      },
+      "alpha": 1.5,
+      "lam": 2.0,
+      "initial_latents": {
+        "sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+        "shape": [
+          1,
+          4,
+          32,
+          128
+        ],
+        "dtype": "torch.float16",
+        "mean": 0.003107805270701647,
+        "std": 0.996928334236145
+      },
+      "attention_processor_class": {
+        "attn2": [
+          "CastCrossAttnProcessor"
+        ],
+        "attn1": [
+          "AttnProcessor2_0"
+        ]
+      },
+      "scheduler": "PNDMScheduler",
+      "versions": {
+        "python": "3.10.20",
+        "torch": "2.0.1+cu118",
+        "cuda_runtime": "11.8",
+        "cudnn": "8700",
+        "gpu": "NVIDIA RTX A5000",
+        "diffusers": "0.18.2",
+        "transformers": "4.31.0",
+        "huggingface_hub": "0.16.4",
+        "entmax": "1.3",
+        "numpy": "1.23.5",
+        "scipy": "1.10.1"
+      },
+      "git_commit": null,
+      "runtime_sec": 9.645935706794262,
+      "peak_cuda_mem_gb": 3.112649440765381,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "final_latent_norm": 93.04946899414062,
+      "final_latents_sha256": "eba1470faefd1a760abc4c70cb490d6dfc10979802bf77ba276054deb675ef6d",
+      "audio_sha256": "783bfa78ea3176570b8d1e3774d804ac2716721d17d59f31e2914544bc8b6e7f",
+      "cast_processor_stats": {
+        "down_blocks.0.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.431782486415145,
+          "mean_sparse_support_cond_half": 1.8635649728302908
+        },
+        "down_blocks.0.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.46051826099358,
+          "mean_sparse_support_cond_half": 1.9210365219871597
+        },
+        "down_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.83948781230662,
+          "mean_sparse_support_cond_half": 2.678975624613243
+        },
+        "down_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.50984781095297,
+          "mean_sparse_support_cond_half": 2.0196956219059405
+        },
+        "down_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.80165870590965,
+          "mean_sparse_support_cond_half": 2.6033174118193068
+        },
+        "down_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 40.17395865563119,
+          "mean_sparse_support_cond_half": 3.347917311262376
+        },
+        "up_blocks.1.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.98446202042079,
+          "mean_sparse_support_cond_half": 2.9689240408415842
+        },
+        "up_blocks.1.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.78960637762995,
+          "mean_sparse_support_cond_half": 2.579212755259901
+        },
+        "up_blocks.1.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.73181031482054,
+          "mean_sparse_support_cond_half": 2.463620629641089
+        },
+        "up_blocks.2.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.734771426361384,
+          "mean_sparse_support_cond_half": 2.469542852722772
+        },
+        "up_blocks.2.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.86379853805693,
+          "mean_sparse_support_cond_half": 2.7275970761138613
+        },
+        "up_blocks.2.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.545369667581994,
+          "mean_sparse_support_cond_half": 2.090739335163985
+        },
+        "up_blocks.3.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.817666233176055,
+          "mean_sparse_support_cond_half": 2.635332466352104
+        },
+        "up_blocks.3.attentions.1.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.55127768941445,
+          "mean_sparse_support_cond_half": 2.1025553788288986
+        },
+        "up_blocks.3.attentions.2.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.51753824064047,
+          "mean_sparse_support_cond_half": 2.0350764812809405
+        },
+        "mid_block.attentions.0.transformer_blocks.0.attn2.processor": {
+          "calls": 101,
+          "mean_sparse_support": 39.815864789603964,
+          "mean_sparse_support_cond_half": 2.6317295792079207
+        }
+      },
+      "sample_rate": 16000,
+      "out_dir": "outputs/first_milestone_deterministic/cast_pladis"
+    }
+  },
+  "diffs": {
+    "golden_vs_golden_with_presampled_latents": {
+      "final_latents": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rel_l2": 0.0,
+        "identical": true
+      },
+      "audio": {
+        "max_abs_int16": 0.0,
+        "mean_abs_int16": 0.0,
+        "identical": true,
+        "snr_db": 239.16527323153127
+      }
+    },
+    "golden_repeat_determinism": {
+      "final_latents": {
+        "max_abs": 0.0,
+        "mean_abs": 0.0,
+        "rel_l2": 0.0,
+        "identical": true
+      },
+      "audio": {
+        "max_abs_int16": 0.0,
+        "mean_abs_int16": 0.0,
+        "identical": true,
+        "snr_db": 239.16527323153127
+      }
+    },
+    "golden_vs_cast_vanilla": {
+      "final_latents": {
+        "max_abs": 0.06982421875,
+        "mean_abs": 0.002164638601243496,
+        "rel_l2": 0.006608427967876196,
+        "identical": false
+      },
+      "spectrogram": {
+        "max_abs": 0.6936283111572266,
+        "mean_abs": 0.008038677275180817,
+        "rel_l2": 0.004157945513725281,
+        "identical": false
+      },
+      "audio": {
+        "max_abs_int16": 22392.0,
+        "mean_abs_int16": 274.4749,
+        "identical": false,
+        "snr_db": 7.449812107877478
+      }
+    },
+    "cast_sparse_vs_cast_vanilla": {
+      "final_latents": {
+        "max_abs": 1.6630859375,
+        "mean_abs": 0.17210066318511963,
+        "rel_l2": 0.39861229062080383,
+        "identical": false
+      },
+      "spectrogram": {
+        "max_abs": 5.503875732421875,
+        "mean_abs": 0.8501373529434204,
+        "rel_l2": 0.2996346056461334,
+        "identical": false
+      },
+      "audio": {
+        "max_abs_int16": 36624.0,
+        "mean_abs_int16": 1732.76591875,
+        "identical": false,
+        "snr_db": -2.987139017645093
+      }
+    },
+    "cast_pladis_vs_cast_vanilla": {
+      "final_latents": {
+        "max_abs": 7.880859375,
+        "mean_abs": 0.33388131856918335,
+        "rel_l2": 0.8380256295204163,
+        "identical": false
+      },
+      "spectrogram": {
+        "max_abs": 7.933626174926758,
+        "mean_abs": 1.4882107973098755,
+        "rel_l2": 0.558121919631958,
+        "identical": false
+      },
+      "audio": {
+        "max_abs_int16": 49264.0,
+        "mean_abs_int16": 2379.9314625,
+        "identical": false,
+        "snr_db": -7.513529733506356
+      }
+    }
+  }
+}

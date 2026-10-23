@@ -1,0 +1,635 @@
+{
+  "config": {
+    "checkpoint": "auffusion/auffusion",
+    "seed": 42,
+    "num_inference_steps": 100,
+    "guidance_scale": 7.5,
+    "height": 256,
+    "width": 1024,
+    "dtype": "float16",
+    "autocast": true,
+    "device": "cuda",
+    "apply_to_uncond": true,
+    "collect_stats": true,
+    "deterministic_self_attn": true,
+    "output_dir": "outputs/pilot0",
+    "modes": [
+      "cast_vanilla",
+      "cast_sparse",
+      "cast_pladis"
+    ]
+  },
+  "stock_processor_classes": [
+    "AttnProcessor2_0"
+  ],
+  "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+  "runs": [
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "mode": "cast_vanilla",
+      "alpha": 1.5,
+      "lambda": 0.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 90.83011627197266,
+      "final_latent_sha256": "6ec0530545e7c23ceccfb4067f986244b0c9a5961217d12ff27ba5379e3cfcb8",
+      "runtime_sec": 7.756599864922464,
+      "peak_gpu_memory_gb": 3.107614040374756,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": null,
+        "all_rows": null
+      },
+      "out_dir": "outputs/pilot0/P01_SINGLE_DOG/cast_vanilla"
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "mode": "cast_sparse",
+      "alpha": 1.5,
+      "lambda": 1.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 100.144775390625,
+      "final_latent_sha256": "8b9df051409bba5580f6169d2c311436cb08207aab990b61685054ba1bd43f3c",
+      "runtime_sec": 9.260578365065157,
+      "peak_gpu_memory_gb": 3.108621120452881,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.3013468071965884,
+          "min": 1.934618355023979,
+          "max": 2.876434628326114
+        },
+        "all_rows": {
+          "mean_over_layers": 39.65067340359829,
+          "min": 39.46730917751199,
+          "max": 39.938217314163055
+        }
+      },
+      "out_dir": "outputs/pilot0/P01_SINGLE_DOG/cast_sparse"
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "mode": "cast_pladis",
+      "alpha": 1.5,
+      "lambda": 2.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 114.91307067871094,
+      "final_latent_sha256": "7f0fab8afeda439be7192a600c0d79fffa978a5695c83164e3cef24eb1390744",
+      "runtime_sec": 9.401609300635755,
+      "peak_gpu_memory_gb": 3.109628200531006,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.3252539304223387,
+          "min": 1.8543870378248761,
+          "max": 2.880103687248608
+        },
+        "all_rows": {
+          "mean_over_layers": 39.66262696521117,
+          "min": 39.42719351891244,
+          "max": 39.9400518436243
+        }
+      },
+      "out_dir": "outputs/pilot0/P01_SINGLE_DOG/cast_pladis"
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "mode": "cast_vanilla",
+      "alpha": 1.5,
+      "lambda": 0.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 77.23783111572266,
+      "final_latent_sha256": "b886a23422e09f3313e3e4203d82bb153335431d685fcd0afc5bf37e549d3fcd",
+      "runtime_sec": 7.378947781398892,
+      "peak_gpu_memory_gb": 3.108682155609131,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": null,
+        "all_rows": null
+      },
+      "out_dir": "outputs/pilot0/P02_SINGLE_RAIN/cast_vanilla"
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "mode": "cast_sparse",
+      "alpha": 1.5,
+      "lambda": 1.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 76.06727600097656,
+      "final_latent_sha256": "b9c919817a52e78acaa5b5468d5890c547e81e2308e5a1f0f93fe89d4b07b898",
+      "runtime_sec": 9.328581777401268,
+      "peak_gpu_memory_gb": 3.108712673187256,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.734650356934803,
+          "min": 1.294342343169864,
+          "max": 3.833805499690594
+        },
+        "all_rows": {
+          "mean_over_layers": 39.8673251784674,
+          "min": 39.14717117158493,
+          "max": 40.4169027498453
+        }
+      },
+      "out_dir": "outputs/pilot0/P02_SINGLE_RAIN/cast_sparse"
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "mode": "cast_pladis",
+      "alpha": 1.5,
+      "lambda": 2.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 75.49459075927734,
+      "final_latent_sha256": "ef80d005b53dd3b81995f8e0adf8bb620215dfa9af6a095ab66deabbd4e64723",
+      "runtime_sec": 9.531482855789363,
+      "peak_gpu_memory_gb": 3.109719753265381,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.824034832491733,
+          "min": 1.5421674369585396,
+          "max": 4.051583771658416
+        },
+        "all_rows": {
+          "mean_over_layers": 39.912017416245874,
+          "min": 39.27108371847927,
+          "max": 40.52579188582921
+        }
+      },
+      "out_dir": "outputs/pilot0/P02_SINGLE_RAIN/cast_pladis"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "mode": "cast_vanilla",
+      "alpha": 1.5,
+      "lambda": 0.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 76.92259979248047,
+      "final_latent_sha256": "c7129a4b75f4f5dd79668f2205cf196d42a6776783ddf6981eb1e47087121488",
+      "runtime_sec": 7.511414365842938,
+      "peak_gpu_memory_gb": 3.108682155609131,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": null,
+        "all_rows": null
+      },
+      "out_dir": "outputs/pilot0/P03_TWO_DOG_RAIN/cast_vanilla"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "mode": "cast_sparse",
+      "alpha": 1.5,
+      "lambda": 1.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 77.76375579833984,
+      "final_latent_sha256": "1ed84809b49bcceb9d65a91a5d2cc2932b214e01e509c148dbc87727b2646dbc",
+      "runtime_sec": 9.478628806769848,
+      "peak_gpu_memory_gb": 3.108712673187256,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.4027942242008624,
+          "min": 1.7424437267945545,
+          "max": 3.0496403155940595
+        },
+        "all_rows": {
+          "mean_over_layers": 39.70139711210044,
+          "min": 39.371221863397274,
+          "max": 40.02482015779703
+        }
+      },
+      "out_dir": "outputs/pilot0/P03_TWO_DOG_RAIN/cast_sparse"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "mode": "cast_pladis",
+      "alpha": 1.5,
+      "lambda": 2.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 93.04946899414062,
+      "final_latent_sha256": "eba1470faefd1a760abc4c70cb490d6dfc10979802bf77ba276054deb675ef6d",
+      "runtime_sec": 9.65290658082813,
+      "peak_gpu_memory_gb": 3.109719753265381,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.4461773787394607,
+          "min": 1.8635649728302908,
+          "max": 3.347917311262376
+        },
+        "all_rows": {
+          "mean_over_layers": 39.72308868936973,
+          "min": 39.431782486415145,
+          "max": 40.17395865563119
+        }
+      },
+      "out_dir": "outputs/pilot0/P03_TWO_DOG_RAIN/cast_pladis"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "mode": "cast_vanilla",
+      "alpha": 1.5,
+      "lambda": 0.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 88.84452819824219,
+      "final_latent_sha256": "2587c2f90e1687501cb703dc9c841c2871b653543ac7865592d32d79a8972114",
+      "runtime_sec": 7.606523098424077,
+      "peak_gpu_memory_gb": 3.108682155609131,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": null,
+        "all_rows": null
+      },
+      "out_dir": "outputs/pilot0/P04_TWO_SPEECH_HORN/cast_vanilla"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "mode": "cast_sparse",
+      "alpha": 1.5,
+      "lambda": 1.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 95.5405502319336,
+      "final_latent_sha256": "6ae31fd9815e9625ed731c74466e3cd47489c50363b5e9e24a0436213ac356b7",
+      "runtime_sec": 9.556616174057126,
+      "peak_gpu_memory_gb": 3.108712673187256,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.3381045502011135,
+          "min": 1.8010238798538056,
+          "max": 2.989905631188119
+        },
+        "all_rows": {
+          "mean_over_layers": 39.66905227510056,
+          "min": 39.4005119399269,
+          "max": 39.99495281559406
+        }
+      },
+      "out_dir": "outputs/pilot0/P04_TWO_SPEECH_HORN/cast_sparse"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "mode": "cast_pladis",
+      "alpha": 1.5,
+      "lambda": 2.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 102.11548614501953,
+      "final_latent_sha256": "3f9ca7f7f1e074f5e3dfebe66407ae1751196557ef3fb53488c671d1d262505a",
+      "runtime_sec": 9.722545916214585,
+      "peak_gpu_memory_gb": 3.109719753265381,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.407816764151696,
+          "min": 1.738244387182859,
+          "max": 2.935919129022277
+        },
+        "all_rows": {
+          "mean_over_layers": 39.70390838207585,
+          "min": 39.36912219359143,
+          "max": 39.96795956451114
+        }
+      },
+      "out_dir": "outputs/pilot0/P04_TWO_SPEECH_HORN/cast_pladis"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "mode": "cast_vanilla",
+      "alpha": 1.5,
+      "lambda": 0.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 76.83375549316406,
+      "final_latent_sha256": "fa5a346a6c638570825c3d73c4adee8af8208fab9dcbcf6dd21b0bfff2028f8a",
+      "runtime_sec": 7.657305088825524,
+      "peak_gpu_memory_gb": 3.108682155609131,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": null,
+        "all_rows": null
+      },
+      "out_dir": "outputs/pilot0/P05_TWO_FOOTSTEPS_BIRDS/cast_vanilla"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "mode": "cast_sparse",
+      "alpha": 1.5,
+      "lambda": 1.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 79.86213684082031,
+      "final_latent_sha256": "cb6c990fd7cb9133b6d4af278c53232d23a6dbe4a7f6ec8f34b4bc3dec3be0cb",
+      "runtime_sec": 9.595927708782256,
+      "peak_gpu_memory_gb": 3.108712673187256,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.635923631120436,
+          "min": 1.2034812398476176,
+          "max": 3.865974048576733
+        },
+        "all_rows": {
+          "mean_over_layers": 39.81796181556021,
+          "min": 39.10174061992381,
+          "max": 40.432987024288366
+        }
+      },
+      "out_dir": "outputs/pilot0/P05_TWO_FOOTSTEPS_BIRDS/cast_sparse"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "mode": "cast_pladis",
+      "alpha": 1.5,
+      "lambda": 2.0,
+      "seed": 42,
+      "deterministic_self_attn": true,
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "final_latent_norm": 86.90834045410156,
+      "final_latent_sha256": "a9938c7abf5cb7fbcaee45b6195c0cd465b9ec1df9ca1e73746ffc45c0b7da54",
+      "runtime_sec": 9.758842875249684,
+      "peak_gpu_memory_gb": 3.109719753265381,
+      "finite": {
+        "audio": true,
+        "spectrogram": true,
+        "final_latents": true
+      },
+      "attn2_processor": [
+        "CastCrossAttnProcessor"
+      ],
+      "attn1_processor": [
+        "AttnProcessor2_0"
+      ],
+      "entmax_support": {
+        "cond_half": {
+          "mean_over_layers": 2.800570195264156,
+          "min": 1.3272221631342822,
+          "max": 4.349686726485149
+        },
+        "all_rows": {
+          "mean_over_layers": 39.90028509763208,
+          "min": 39.16361108156714,
+          "max": 40.67484336324257
+        }
+      },
+      "out_dir": "outputs/pilot0/P05_TWO_FOOTSTEPS_BIRDS/cast_pladis"
+    }
+  ],
+  "per_prompt": {
+    "P01_SINGLE_DOG": {
+      "prompt": "A dog barking loudly.",
+      "delta_sparse": 0.65375155210495,
+      "delta_pladis": 0.8926419019699097,
+      "delta_pladis_vs_sparse": 0.5504266023635864,
+      "final_latent_norms": {
+        "cast_vanilla": 90.83011627197266,
+        "cast_sparse": 100.144775390625,
+        "cast_pladis": 114.91307067871094
+      },
+      "initial_latent_sha256_identical": true
+    },
+    "P02_SINGLE_RAIN": {
+      "prompt": "Heavy rain falling on a roof.",
+      "delta_sparse": 0.29722240567207336,
+      "delta_pladis": 0.5673377513885498,
+      "delta_pladis_vs_sparse": 0.4430280923843384,
+      "final_latent_norms": {
+        "cast_vanilla": 77.23783111572266,
+        "cast_sparse": 76.06727600097656,
+        "cast_pladis": 75.49459075927734
+      },
+      "initial_latent_sha256_identical": true
+    },
+    "P03_TWO_DOG_RAIN": {
+      "prompt": "A dog barking while rain falls in the background.",
+      "delta_sparse": 0.398612380027771,
+      "delta_pladis": 0.8380254507064819,
+      "delta_pladis_vs_sparse": 0.7228263020515442,
+      "final_latent_norms": {
+        "cast_vanilla": 76.92259979248047,
+        "cast_sparse": 77.76375579833984,
+        "cast_pladis": 93.04946899414062
+      },
+      "initial_latent_sha256_identical": true
+    },
+    "P04_TWO_SPEECH_HORN": {
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "delta_sparse": 0.5852504968643188,
+      "delta_pladis": 0.7872437238693237,
+      "delta_pladis_vs_sparse": 0.545975387096405,
+      "final_latent_norms": {
+        "cast_vanilla": 88.84452819824219,
+        "cast_sparse": 95.5405502319336,
+        "cast_pladis": 102.11548614501953
+      },
+      "initial_latent_sha256_identical": true
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS": {
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "delta_sparse": 0.33293381333351135,
+      "delta_pladis": 0.7413066029548645,
+      "delta_pladis_vs_sparse": 0.5749091506004333,
+      "final_latent_norms": {
+        "cast_vanilla": 76.83375549316406,
+        "cast_sparse": 79.86213684082031,
+        "cast_pladis": 86.90834045410156
+      },
+      "initial_latent_sha256_identical": true
+    }
+  },
+  "dry_check_P01": {
+    "deterministic_self_attn_true": true,
+    "three_runs": true,
+    "attn2_all_cast_16": true,
+    "attn1_untouched_stock": true,
+    "processors_restored_after_runs": true,
+    "same_initial_latent": true,
+    "alpha_1p5_all": true,
+    "lambda_exact_0_1_2": true,
+    "no_nan_inf": true
+  },
+  "failures": [],
+  "all_initial_latents_identical": true,
+  "n_runs": 15,
+  "n_invalid": 0
+}

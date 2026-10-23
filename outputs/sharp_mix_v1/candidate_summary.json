@@ -1,0 +1,162 @@
+{
+  "screened": {
+    "0.25": {
+      "clap_cosine": {
+        "delta": -0.0026656480299101937,
+        "ci95": [
+          -0.010931714003284772,
+          0.005558591511928364
+        ]
+      },
+      "aqascore_full": {
+        "delta": 0.004036312532420985,
+        "ci95": [
+          -0.005047108103853394,
+          0.013250766437029122
+        ]
+      },
+      "PQ": {
+        "delta": -0.01986346973313226,
+        "ci95": [
+          -0.06321974189745054,
+          0.02106466243664421
+        ]
+      },
+      "all_point_estimates_nonnegative": false,
+      "any_ci_excludes_zero_negative": false,
+      "any_ci_excludes_zero_positive": false
+    },
+    "0.5": {
+      "clap_cosine": {
+        "delta": -0.010910010586182276,
+        "ci95": [
+          -0.02396164953501688,
+          0.0011456549685034477
+        ]
+      },
+      "aqascore_full": {
+        "delta": -0.003169970518505262,
+        "ci95": [
+          -0.01320025826243016,
+          0.005623554993279502
+        ]
+      },
+      "PQ": {
+        "delta": -0.05970276726616753,
+        "ci95": [
+          -0.1304381647043758,
+          0.0070051292578379104
+        ]
+      },
+      "all_point_estimates_nonnegative": false,
+      "any_ci_excludes_zero_negative": false,
+      "any_ci_excludes_zero_positive": false
+    },
+    "0.75": {
+      "clap_cosine": {
+        "delta": -0.009643540407220522,
+        "ci95": [
+          -0.022296340779090918,
+          0.002794805758943158
+        ]
+      },
+      "aqascore_full": {
+        "delta": 0.003557081644949223,
+        "ci95": [
+          -0.008305486129124915,
+          0.016823235881755626
+        ]
+      },
+      "PQ": {
+        "delta": -0.07815424932373895,
+        "ci95": [
+          -0.16414201400346226,
+          0.007437008867661051
+        ]
+      },
+      "all_point_estimates_nonnegative": false,
+      "any_ci_excludes_zero_negative": false,
+      "any_ci_excludes_zero_positive": false
+    }
+  },
+  "rule": "a development-set candidate requires non-negative point estimates on all three primary metrics (CLAP, AQAScore, PQ) with at least one CI excluding 0 on the positive side and none excluding 0 on the negative side; otherwise NO DEVELOPMENT CANDIDATE",
+  "pareto": {
+    "0.0": {
+      "type": "Dense",
+      "CLAP": 0.5552267378403081,
+      "AQAScore": 0.9048213666513517,
+      "PQ": 5.922017564376195,
+      "dominated_by": [],
+      "non_dominated": true
+    },
+    "0.25": {
+      "type": "Interpolation",
+      "CLAP": 0.552561089810398,
+      "AQAScore": 0.9088576791837729,
+      "PQ": 5.9021540946430635,
+      "dominated_by": [],
+      "non_dominated": true
+    },
+    "0.5": {
+      "type": "Interpolation",
+      "CLAP": 0.5443167272541258,
+      "AQAScore": 0.9016513961328466,
+      "PQ": 5.862314797110027,
+      "dominated_by": [
+        "0.0",
+        "0.25"
+      ],
+      "non_dominated": false
+    },
+    "0.75": {
+      "type": "Interpolation",
+      "CLAP": 0.5455831974330875,
+      "AQAScore": 0.908378448296301,
+      "PQ": 5.843863315052456,
+      "dominated_by": [
+        "0.25"
+      ],
+      "non_dominated": false
+    },
+    "1.0": {
+      "type": "Full Sharp",
+      "CLAP": 0.5346268392685386,
+      "AQAScore": 0.8916016157669221,
+      "PQ": 5.827880995141136,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "non_dominated": false
+    },
+    "1.25": {
+      "type": "Extrapolation",
+      "CLAP": 0.5272368345823553,
+      "AQAScore": 0.887568940953631,
+      "PQ": 5.750190453396903,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75",
+        "1.0"
+      ],
+      "non_dominated": false
+    },
+    "1.5": {
+      "type": "Extrapolation",
+      "CLAP": 0.5121331248018477,
+      "AQAScore": 0.8926532993020667,
+      "PQ": 5.702371127075619,
+      "dominated_by": [
+        "0.0",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "non_dominated": false
+    }
+  }
+}

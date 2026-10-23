@@ -1,0 +1,1534 @@
+{
+  "metric": "clap_cosine = dot(L2norm(audio_emb), L2norm(text_emb)); clap_percent = 100*clap_cosine",
+  "model_info": {
+    "model": "laion/clap-htsat-unfused",
+    "snapshot": "8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+    "param_dtype": "torch.float64",
+    "device": "cuda",
+    "transformers": "4.31.0",
+    "torch": "2.0.1+cu118",
+    "torchaudio": "2.0.2+cu118",
+    "feature_extractor": {
+      "sampling_rate": 48000,
+      "max_length_s": 10,
+      "nb_max_samples": 480000,
+      "truncation": "rand_trunc",
+      "padding": "repeatpad",
+      "feature_size": 64,
+      "hop_length": 480,
+      "fft_window_size": 1024
+    },
+    "logit_scale_audio_exp": 18.66117655612911,
+    "logit_scale_text_exp": 14.285714251833989,
+    "weights_sha256": "1cd3c601bc4afe0fa87be3de4c13dd2cfadd249fac1e29acf74a9b296c3219bb"
+  },
+  "repeatability": {
+    "sample": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_1.00/audio.wav",
+    "scores": [
+      0.643550455570221,
+      0.643550455570221,
+      0.643550455570221
+    ],
+    "max_abs_diff": 0.0
+  },
+  "logit_scale_check": {
+    "logits_per_audio": 12.009408950805664,
+    "cosine": 0.643550455570221,
+    "cosine_x_logit_scale_t": 9.193577914913762,
+    "cosine_x_logit_scale_a": 12.009408674173216
+  },
+  "sanity": {
+    "all_found": true,
+    "all_finite": true,
+    "n": 35,
+    "all_input_sr_16000": true,
+    "all_mono": true,
+    "all_resampled_len_480000": true,
+    "any_clipping_after_resample": true,
+    "max_input_peak": 1.0,
+    "max_resampled_peak": 1.5627938508987427,
+    "input_features_shape": [
+      [
+        1,
+        1,
+        1001,
+        64
+      ]
+    ]
+  },
+  "audio_checks": {
+    "P01_SINGLE_DOG/lambda_0.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9501953125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9528055787086487,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_0.25": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.92822265625,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9287711977958679,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_0.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9833984375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9912301898002625,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_0.75": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.98779296875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0779465436935425,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_1.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.98876953125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.2326503992080688,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_1.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 1.0,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.5136715173721313,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P01_SINGLE_DOG/lambda_2.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 1.0,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.5627938508987427,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_0.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.935546875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.1673725843429565,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_0.25": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.92724609375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.157433032989502,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_0.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.94287109375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.1558645963668823,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_0.75": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.953125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0991727113723755,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_1.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9365234375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0555776357650757,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_1.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.86376953125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9820181131362915,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P02_SINGLE_RAIN/lambda_2.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.70556640625,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.7466537356376648,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_0.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.8798828125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.8811041116714478,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_0.25": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.82373046875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.8277381062507629,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_0.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9140625,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9254028797149658,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_0.75": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.92578125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9261021614074707,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_1.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.88623046875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.8899023532867432,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_1.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9130859375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9138418436050415,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P03_TWO_DOG_RAIN/lambda_2.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.99951171875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0727015733718872,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_0.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.88818359375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.8949763774871826,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_0.25": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9365234375,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9564084410667419,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_0.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.99267578125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0665345191955566,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_0.75": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.99658203125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.0657323598861694,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_1.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.998046875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.094635009765625,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_1.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 1.0,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.3687708377838135,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P04_TWO_SPEECH_HORN/lambda_2.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 1.0,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.4472217559814453,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.85791015625,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.9706490635871887,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.25": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.8935546875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 0.8917590379714966,
+      "clipped_after_resample": false,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.92236328125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.104543685913086,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_0.75": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.955078125,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.3367749452590942,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_1.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.9853515625,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.2195831537246704,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_1.50": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 0.99951171875,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.4259666204452515,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS/lambda_2.00": {
+      "input_sr": 16000,
+      "input_dtype": "int16",
+      "input_len": 160000,
+      "channels": 1,
+      "input_peak": 1.0,
+      "clap_sr": 48000,
+      "resampled_len": 480000,
+      "resampled_peak": 1.5414942502975464,
+      "clipped_after_resample": true,
+      "input_features_shape": [
+        1,
+        1,
+        1001,
+        64
+      ]
+    }
+  },
+  "samples": [
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 0.0,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_0.00/audio.wav",
+      "clap_cosine": 0.589914858341217,
+      "clap_percent": 58.991485834121704,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 0.25,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_0.25/audio.wav",
+      "clap_cosine": 0.6017757654190063,
+      "clap_percent": 60.177576541900635,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 0.5,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_0.50/audio.wav",
+      "clap_cosine": 0.6250690221786499,
+      "clap_percent": 62.50690221786499,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 0.75,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_0.75/audio.wav",
+      "clap_cosine": 0.629059374332428,
+      "clap_percent": 62.9059374332428,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 1.0,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_1.00/audio.wav",
+      "clap_cosine": 0.6546491384506226,
+      "clap_percent": 65.46491384506226,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 1.5,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_1.50/audio.wav",
+      "clap_cosine": 0.5997507572174072,
+      "clap_percent": 59.97507572174072,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P01_SINGLE_DOG",
+      "prompt": "A dog barking loudly.",
+      "lambda": 2.0,
+      "audio_path": "outputs/lambda_sweep0/P01_SINGLE_DOG/lambda_2.00/audio.wav",
+      "clap_cosine": 0.55901700258255,
+      "clap_percent": 55.901700258255005,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 0.0,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_0.00/audio.wav",
+      "clap_cosine": 0.6083961725234985,
+      "clap_percent": 60.83961725234985,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 0.25,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_0.25/audio.wav",
+      "clap_cosine": 0.5749895572662354,
+      "clap_percent": 57.498955726623535,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 0.5,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_0.50/audio.wav",
+      "clap_cosine": 0.5508729219436646,
+      "clap_percent": 55.087292194366455,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 0.75,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_0.75/audio.wav",
+      "clap_cosine": 0.5724598169326782,
+      "clap_percent": 57.24598169326782,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 1.0,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_1.00/audio.wav",
+      "clap_cosine": 0.38941675424575806,
+      "clap_percent": 38.941675424575806,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 1.5,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_1.50/audio.wav",
+      "clap_cosine": 0.41382771730422974,
+      "clap_percent": 41.382771730422974,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true
+    },
+    {
+      "prompt_id": "P02_SINGLE_RAIN",
+      "prompt": "Heavy rain falling on a roof.",
+      "lambda": 2.0,
+      "audio_path": "outputs/lambda_sweep0/P02_SINGLE_RAIN/lambda_2.00/audio.wav",
+      "clap_cosine": 0.3546163737773895,
+      "clap_percent": 35.46163737773895,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 0.0,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_0.00/audio.wav",
+      "clap_cosine": 0.6721561551094055,
+      "clap_percent": 67.21561551094055,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.4260022044181824,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.35090893507003784,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 0.25,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_0.25/audio.wav",
+      "clap_cosine": 0.6726377010345459,
+      "clap_percent": 67.26377010345459,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.4361714720726013,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.37506261467933655,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 0.5,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_0.50/audio.wav",
+      "clap_cosine": 0.6582632064819336,
+      "clap_percent": 65.82632064819336,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.43187540769577026,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.3130706548690796,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 0.75,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_0.75/audio.wav",
+      "clap_cosine": 0.663341760635376,
+      "clap_percent": 66.3341760635376,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.460005521774292,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.2388797253370285,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 1.0,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_1.00/audio.wav",
+      "clap_cosine": 0.643550455570221,
+      "clap_percent": 64.3550455570221,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.48205310106277466,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.18896353244781494,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 1.5,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_1.50/audio.wav",
+      "clap_cosine": 0.5918772220611572,
+      "clap_percent": 59.18772220611572,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.48534852266311646,
+      "event_text_A": "a dog barking",
+      "event_clap_B": 0.08896427601575851,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P03_TWO_DOG_RAIN",
+      "prompt": "A dog barking while rain falls in the background.",
+      "lambda": 2.0,
+      "audio_path": "outputs/lambda_sweep0/P03_TWO_DOG_RAIN/lambda_2.00/audio.wav",
+      "clap_cosine": 0.4975910782814026,
+      "clap_percent": 49.75910782814026,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.4984695315361023,
+      "event_text_A": "a dog barking",
+      "event_clap_B": -0.06462707370519638,
+      "event_text_B": "rain falling"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 0.0,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_0.00/audio.wav",
+      "clap_cosine": 0.8094769716262817,
+      "clap_percent": 80.94769716262817,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.21321073174476624,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.42392051219940186,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 0.25,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_0.25/audio.wav",
+      "clap_cosine": 0.8071838617324829,
+      "clap_percent": 80.71838617324829,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.2095869779586792,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.4287239909172058,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 0.5,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_0.50/audio.wav",
+      "clap_cosine": 0.8014720678329468,
+      "clap_percent": 80.14720678329468,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.21262235939502716,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.4539082944393158,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 0.75,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_0.75/audio.wav",
+      "clap_cosine": 0.7894501090049744,
+      "clap_percent": 78.94501090049744,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.2080840766429901,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.44680362939834595,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 1.0,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_1.00/audio.wav",
+      "clap_cosine": 0.7777099609375,
+      "clap_percent": 77.77099609375,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.211250901222229,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.44228044152259827,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 1.5,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_1.50/audio.wav",
+      "clap_cosine": 0.7323538064956665,
+      "clap_percent": 73.23538064956665,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.1862054467201233,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.38870492577552795,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P04_TWO_SPEECH_HORN",
+      "prompt": "A man speaking while a car horn sounds nearby.",
+      "lambda": 2.0,
+      "audio_path": "outputs/lambda_sweep0/P04_TWO_SPEECH_HORN/lambda_2.00/audio.wav",
+      "clap_cosine": 0.6165784597396851,
+      "clap_percent": 61.657845973968506,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.1388232260942459,
+      "event_text_A": "a man speaking",
+      "event_clap_B": 0.30657756328582764,
+      "event_text_B": "a car horn"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 0.0,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_0.00/audio.wav",
+      "clap_cosine": 0.5628498196601868,
+      "clap_percent": 56.28498196601868,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.3106197118759155,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.1521356999874115,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 0.25,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_0.25/audio.wav",
+      "clap_cosine": 0.5710644721984863,
+      "clap_percent": 57.10644721984863,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.27965497970581055,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.1408015936613083,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 0.5,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_0.50/audio.wav",
+      "clap_cosine": 0.5688909292221069,
+      "clap_percent": 56.88909292221069,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.26853659749031067,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.13693903386592865,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 0.75,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_0.75/audio.wav",
+      "clap_cosine": 0.5409971475601196,
+      "clap_percent": 54.09971475601196,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.2570386528968811,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.12188279628753662,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 1.0,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_1.00/audio.wav",
+      "clap_cosine": 0.523607611656189,
+      "clap_percent": 52.3607611656189,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.21667706966400146,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.11148242652416229,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 1.5,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_1.50/audio.wav",
+      "clap_cosine": 0.21864423155784607,
+      "clap_percent": 21.864423155784607,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "generated",
+      "finite": true,
+      "event_clap_A": 0.026117613539099693,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.026562809944152832,
+      "event_text_B": "birds chirping"
+    },
+    {
+      "prompt_id": "P05_TWO_FOOTSTEPS_BIRDS",
+      "prompt": "Footsteps on a wooden floor while birds chirp outside.",
+      "lambda": 2.0,
+      "audio_path": "outputs/lambda_sweep0/P05_TWO_FOOTSTEPS_BIRDS/lambda_2.00/audio.wav",
+      "clap_cosine": 0.20218044519424438,
+      "clap_percent": 20.21804451942444,
+      "alpha": 1.5,
+      "seed": 42,
+      "checkpoint": "auffusion/auffusion",
+      "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+      "source": "reused_pilot0",
+      "finite": true,
+      "event_clap_A": 0.05299760401248932,
+      "event_text_A": "footsteps on a wooden floor",
+      "event_clap_B": 0.02025487832725048,
+      "event_text_B": "birds chirping"
+    }
+  ],
+  "by_lambda": {
+    "0.00": {
+      "mean": 0.6485587954521179,
+      "std": 0.08814723022045583,
+      "min": 0.5628498196601868,
+      "max": 0.8094769716262817,
+      "n": 5,
+      "mean_percent": 64.85587954521179
+    },
+    "0.25": {
+      "mean": 0.6455302715301514,
+      "std": 0.08865923573281752,
+      "min": 0.5710644721984863,
+      "max": 0.8071838617324829,
+      "n": 5,
+      "mean_percent": 64.55302715301514
+    },
+    "0.50": {
+      "mean": 0.6409136295318604,
+      "std": 0.08902322157178905,
+      "min": 0.5508729219436646,
+      "max": 0.8014720678329468,
+      "n": 5,
+      "mean_percent": 64.09136295318604
+    },
+    "0.75": {
+      "mean": 0.6390616416931152,
+      "std": 0.08643923727057685,
+      "min": 0.5409971475601196,
+      "max": 0.7894501090049744,
+      "n": 5,
+      "mean_percent": 63.906164169311516
+    },
+    "1.00": {
+      "mean": 0.5977867841720581,
+      "std": 0.13162113014097296,
+      "min": 0.38941675424575806,
+      "max": 0.7777099609375,
+      "n": 5,
+      "mean_percent": 59.77867841720581
+    },
+    "1.50": {
+      "mean": 0.5112907469272614,
+      "std": 0.17794901224898346,
+      "min": 0.21864423155784607,
+      "max": 0.7323538064956665,
+      "n": 5,
+      "mean_percent": 51.12907469272614
+    },
+    "2.00": {
+      "mean": 0.4459966719150543,
+      "std": 0.14988691440551785,
+      "min": 0.20218044519424438,
+      "max": 0.6165784597396851,
+      "n": 5,
+      "mean_percent": 44.59966719150543
+    }
+  },
+  "per_prompt": {
+    "P01_SINGLE_DOG": {
+      "0.00": 0.589914858341217,
+      "0.25": 0.6017757654190063,
+      "0.50": 0.6250690221786499,
+      "0.75": 0.629059374332428,
+      "1.00": 0.6546491384506226,
+      "1.50": 0.5997507572174072,
+      "2.00": 0.55901700258255
+    },
+    "P02_SINGLE_RAIN": {
+      "0.00": 0.6083961725234985,
+      "0.25": 0.5749895572662354,
+      "0.50": 0.5508729219436646,
+      "0.75": 0.5724598169326782,
+      "1.00": 0.38941675424575806,
+      "1.50": 0.41382771730422974,
+      "2.00": 0.3546163737773895
+    },
+    "P03_TWO_DOG_RAIN": {
+      "0.00": 0.6721561551094055,
+      "0.25": 0.6726377010345459,
+      "0.50": 0.6582632064819336,
+      "0.75": 0.663341760635376,
+      "1.00": 0.643550455570221,
+      "1.50": 0.5918772220611572,
+      "2.00": 0.4975910782814026
+    },
+    "P04_TWO_SPEECH_HORN": {
+      "0.00": 0.8094769716262817,
+      "0.25": 0.8071838617324829,
+      "0.50": 0.8014720678329468,
+      "0.75": 0.7894501090049744,
+      "1.00": 0.7777099609375,
+      "1.50": 0.7323538064956665,
+      "2.00": 0.6165784597396851
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS": {
+      "0.00": 0.5628498196601868,
+      "0.25": 0.5710644721984863,
+      "0.50": 0.5688909292221069,
+      "0.75": 0.5409971475601196,
+      "1.00": 0.523607611656189,
+      "1.50": 0.21864423155784607,
+      "2.00": 0.20218044519424438
+    }
+  },
+  "delta_vs_lambda0": {
+    "P01_SINGLE_DOG": {
+      "0.00": 0.0,
+      "0.25": 0.011860907077789307,
+      "0.50": 0.03515416383743286,
+      "0.75": 0.03914451599121094,
+      "1.00": 0.06473428010940552,
+      "1.50": 0.009835898876190186,
+      "2.00": -0.030897855758666992
+    },
+    "P02_SINGLE_RAIN": {
+      "0.00": 0.0,
+      "0.25": -0.033406615257263184,
+      "0.50": -0.057523250579833984,
+      "0.75": -0.03593635559082031,
+      "1.00": -0.21897941827774048,
+      "1.50": -0.1945684552192688,
+      "2.00": -0.253779798746109
+    },
+    "P03_TWO_DOG_RAIN": {
+      "0.00": 0.0,
+      "0.25": 0.00048154592514038086,
+      "0.50": -0.013892948627471924,
+      "0.75": -0.008814394474029541,
+      "1.00": -0.02860569953918457,
+      "1.50": -0.08027893304824829,
+      "2.00": -0.17456507682800293
+    },
+    "P04_TWO_SPEECH_HORN": {
+      "0.00": 0.0,
+      "0.25": -0.002293109893798828,
+      "0.50": -0.008004903793334961,
+      "0.75": -0.020026862621307373,
+      "1.00": -0.03176701068878174,
+      "1.50": -0.07712316513061523,
+      "2.00": -0.19289851188659668
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS": {
+      "0.00": 0.0,
+      "0.25": 0.00821465253829956,
+      "0.50": 0.006041109561920166,
+      "0.75": -0.02185267210006714,
+      "1.00": -0.0392422080039978,
+      "1.50": -0.3442055881023407,
+      "2.00": -0.3606693744659424
+    }
+  },
+  "mean_delta_vs_lambda0": {
+    "0.00": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "0.25": {
+      "mean": -0.0030285239219665526,
+      "std": 0.016023695140092952,
+      "min": -0.033406615257263184,
+      "max": 0.011860907077789307
+    },
+    "0.50": {
+      "mean": -0.007645165920257569,
+      "std": 0.030153223024026305,
+      "min": -0.057523250579833984,
+      "max": 0.03515416383743286
+    },
+    "0.75": {
+      "mean": -0.009497153759002685,
+      "std": 0.0258032679792112,
+      "min": -0.03593635559082031,
+      "max": 0.03914451599121094
+    },
+    "1.00": {
+      "mean": -0.050772011280059814,
+      "std": 0.09232649338806743,
+      "min": -0.21897941827774048,
+      "max": 0.06473428010940552
+    },
+    "1.50": {
+      "mean": -0.13726804852485658,
+      "std": 0.12215663675462816,
+      "min": -0.3442055881023407,
+      "max": 0.009835898876190186
+    },
+    "2.00": {
+      "mean": -0.2025621235370636,
+      "std": 0.10767264638389838,
+      "min": -0.3606693744659424,
+      "max": -0.030897855758666992
+    }
+  },
+  "event_clap_exploratory": {
+    "P03_TWO_DOG_RAIN": {
+      "0.00": {
+        "A": 0.4260022044181824,
+        "B": 0.35090893507003784
+      },
+      "0.25": {
+        "A": 0.4361714720726013,
+        "B": 0.37506261467933655
+      },
+      "0.50": {
+        "A": 0.43187540769577026,
+        "B": 0.3130706548690796
+      },
+      "0.75": {
+        "A": 0.460005521774292,
+        "B": 0.2388797253370285
+      },
+      "1.00": {
+        "A": 0.48205310106277466,
+        "B": 0.18896353244781494
+      },
+      "1.50": {
+        "A": 0.48534852266311646,
+        "B": 0.08896427601575851
+      },
+      "2.00": {
+        "A": 0.4984695315361023,
+        "B": -0.06462707370519638
+      }
+    },
+    "P04_TWO_SPEECH_HORN": {
+      "0.00": {
+        "A": 0.21321073174476624,
+        "B": 0.42392051219940186
+      },
+      "0.25": {
+        "A": 0.2095869779586792,
+        "B": 0.4287239909172058
+      },
+      "0.50": {
+        "A": 0.21262235939502716,
+        "B": 0.4539082944393158
+      },
+      "0.75": {
+        "A": 0.2080840766429901,
+        "B": 0.44680362939834595
+      },
+      "1.00": {
+        "A": 0.211250901222229,
+        "B": 0.44228044152259827
+      },
+      "1.50": {
+        "A": 0.1862054467201233,
+        "B": 0.38870492577552795
+      },
+      "2.00": {
+        "A": 0.1388232260942459,
+        "B": 0.30657756328582764
+      }
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS": {
+      "0.00": {
+        "A": 0.3106197118759155,
+        "B": 0.1521356999874115
+      },
+      "0.25": {
+        "A": 0.27965497970581055,
+        "B": 0.1408015936613083
+      },
+      "0.50": {
+        "A": 0.26853659749031067,
+        "B": 0.13693903386592865
+      },
+      "0.75": {
+        "A": 0.2570386528968811,
+        "B": 0.12188279628753662
+      },
+      "1.00": {
+        "A": 0.21667706966400146,
+        "B": 0.11148242652416229
+      },
+      "1.50": {
+        "A": 0.026117613539099693,
+        "B": 0.026562809944152832
+      },
+      "2.00": {
+        "A": 0.05299760401248932,
+        "B": 0.02025487832725048
+      }
+    }
+  },
+  "event_phrases": {
+    "P03_TWO_DOG_RAIN": {
+      "A": "a dog barking",
+      "B": "rain falling"
+    },
+    "P04_TWO_SPEECH_HORN": {
+      "A": "a man speaking",
+      "B": "a car horn"
+    },
+    "P05_TWO_FOOTSTEPS_BIRDS": {
+      "A": "footsteps on a wooden floor",
+      "B": "birds chirping"
+    }
+  }
+}

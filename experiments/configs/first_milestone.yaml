@@ -1,0 +1,14 @@
+# CAST first milestone: one prompt, one seed, three CAST arms (lambda 0 / 1 / 2) + golden reference.
+checkpoint: auffusion/auffusion
+prompt: "A dog barking while rain falls in the background."
+seed: 42
+num_inference_steps: 100
+guidance_scale: 7.5
+height: 256
+width: 1024
+dtype: float16
+autocast: true
+device: cuda
+apply_to_uncond: true
+collect_stats: true
+output_dir: outputs/first_milestone

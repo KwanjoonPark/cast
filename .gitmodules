@@ -1,0 +1,9 @@
+[submodule "third_party/Auffusion"]
+	path = third_party/Auffusion
+	url = https://github.com/happylittlecat2333/Auffusion.git
+[submodule "third_party/PLADIS"]
+	path = third_party/PLADIS
+	url = https://github.com/cubeyoung/PLADIS.git
+[submodule "third_party/ELSA"]
+	path = third_party/ELSA
+	url = https://github.com/kento2247/ELSA.git

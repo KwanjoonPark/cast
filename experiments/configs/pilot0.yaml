@@ -1,0 +1,21 @@
+# CAST Pilot 0: 5 prompts x 3 CAST arms (lambda 0/1/2), deterministic self-attention, shared seed-42 initial latent.
+checkpoint: auffusion/auffusion
+seed: 42
+num_inference_steps: 100
+guidance_scale: 7.5
+height: 256
+width: 1024
+dtype: float16
+autocast: true
+device: cuda
+apply_to_uncond: true
+collect_stats: true
+deterministic_self_attn: true
+output_dir: outputs/pilot0
+modes: [cast_vanilla, cast_sparse, cast_pladis]
+prompts:
+  P01_SINGLE_DOG: "A dog barking loudly."
+  P02_SINGLE_RAIN: "Heavy rain falling on a roof."
+  P03_TWO_DOG_RAIN: "A dog barking while rain falls in the background."
+  P04_TWO_SPEECH_HORN: "A man speaking while a car horn sounds nearby."
+  P05_TWO_FOOTSTEPS_BIRDS: "Footsteps on a wooden floor while birds chirp outside."

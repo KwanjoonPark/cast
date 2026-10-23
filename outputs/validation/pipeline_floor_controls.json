@@ -1,0 +1,62 @@
+{
+  "STOCK default-SDPA golden vs STOCK math-SDPA golden (both stock processors; kernel-only change)": {
+    "final_latents": {
+      "max_abs": 0.08887,
+      "mean_abs": 0.003378,
+      "rel_l2": 0.009467,
+      "identical": false
+    },
+    "audio": {
+      "snr_db": 6.11,
+      "mean_abs": 340.1
+    }
+  },
+  "CAST lam0 nondet vs CAST lam0 det": {
+    "final_latents": {
+      "max_abs": 0.06934,
+      "mean_abs": 0.002056,
+      "rel_l2": 0.0052,
+      "identical": false
+    },
+    "audio": {
+      "snr_db": 13.42,
+      "mean_abs": 171.4
+    }
+  },
+  "CAST lam0 det vs STOCK math golden": {
+    "final_latents": {
+      "max_abs": 0.06982,
+      "mean_abs": 0.002165,
+      "rel_l2": 0.006608,
+      "identical": false
+    },
+    "audio": {
+      "snr_db": 7.45,
+      "mean_abs": 274.5
+    }
+  },
+  "CAST lam1 nondet vs CAST lam1 det": {
+    "final_latents": {
+      "max_abs": 0.05078,
+      "mean_abs": 0.001911,
+      "rel_l2": 0.004969,
+      "identical": false
+    },
+    "audio": {
+      "snr_db": 18.03,
+      "mean_abs": 137.5
+    }
+  },
+  "CAST lam2 nondet vs CAST lam2 det": {
+    "final_latents": {
+      "max_abs": 0.05078,
+      "mean_abs": 0.001677,
+      "rel_l2": 0.003627,
+      "identical": false
+    },
+    "audio": {
+      "snr_db": 20.86,
+      "mean_abs": 129.6
+    }
+  }
+}

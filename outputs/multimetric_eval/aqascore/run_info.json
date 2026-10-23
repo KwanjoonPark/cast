@@ -1,0 +1,74 @@
+{
+  "validation": {
+    "sample": "outputs/diagnostic_v1/A_DISCRETE_SINGLE/A01/seed_42/lambda_0/audio.wav",
+    "prompt": "A dog barking loudly.",
+    "repeat_scores": [
+      0.9669140216112958,
+      0.9669140216112958,
+      0.9669140216112958
+    ],
+    "repeat_max_abs_diff": 0.0,
+    "repeat_logp_yes": [
+      -2.4773130416870117,
+      -2.4773130416870117,
+      -2.4773130416870117
+    ],
+    "repeat_logp_no": [
+      -5.852313041687012,
+      -5.852313041687012,
+      -5.852313041687012
+    ],
+    "finite": true,
+    "in_range": true,
+    "matching_prompt_score": 0.9669140216112958,
+    "unrelated_prompt": "Steady rain falling on a roof.",
+    "unrelated_prompt_score": 0.007577241267860811,
+    "model_info": {
+      "model_dir": "/home/reallab/.cache/cast_eval/Qwen2.5-Omni-7B-thinker",
+      "load_mode": "Qwen2_5OmniThinkerForConditionalGeneration",
+      "param_dtype": "torch.bfloat16",
+      "device": "cuda",
+      "n_params_loaded_M": 8931.813888,
+      "response_token_ids": {
+        "Yes": [
+          9454
+        ],
+        "No": [
+          2753
+        ],
+        "yes": [
+          9693
+        ],
+        "no": [
+          2152
+        ]
+      },
+      "response_token_strings": {
+        "Yes": [
+          "Yes"
+        ],
+        "No": [
+          "No"
+        ],
+        "yes": [
+          "yes"
+        ],
+        "no": [
+          "no"
+        ]
+      },
+      "system_prompt": "Your role is to listen attentively to the given audio and decide whether the provided text accurately and completely describes what is heard.\nMake your judgment strictly based on the sounds in the audio \u2014 do not guess, imagine, or add information that is not clearly audible.\nIf something is missing, unclear, or uncertain, do not assume it exists.\n\nYour task: given an audio clip and a text description, carefully compare the text with what you actually hear.\nIdentify the main sound events (such as speech, background noise, music, or environmental sounds) and decide whether the text correctly reflects them.\nAlways respond objectively and concisely, using \u201cyes\u201d or \u201cno\u201d to indicate whether the text matches the audio content.",
+      "question_template": "Does this audio contain the sound events described by the text: {t}? Please answer yes or no.",
+      "audio_feature_extractor_sr": 16000
+    },
+    "transformers": "4.57.1",
+    "torch": "2.4.1+cu124",
+    "cuda": "12.4",
+    "gpu": "NVIDIA RTX A5000",
+    "peak_mem_gb": 16.81714963912964
+  },
+  "n_samples": 504,
+  "n_event_rows": 756,
+  "all_finite": true,
+  "elapsed_min": 3.551802678902944
+}

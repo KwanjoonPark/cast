@@ -1,3 +1,16 @@
+# python
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# not versioned: paper PDFs, regenerable previews
+papers/
+paper_assets/previews/
+
+# outputs/: keep experiment-level result tables, summaries and plots only.
+# Per-run audio, latents, spectrograms and manifests are regenerable (fixed seeds, deterministic mode).
+outputs/_*.log
+outputs/**/*.wav
+outputs/**/*.pt
+outputs/**/spectrogram.png
+outputs/**/manifest.json
