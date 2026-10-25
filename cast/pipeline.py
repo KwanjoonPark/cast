@@ -79,7 +79,7 @@ def save_spectrogram_png(spec: torch.Tensor, path: str, title: str = ""):
 
 
 def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = None, out_dir: Optional[str] = None,
-            use_generator: bool = True, save: bool = True, probe_betas=(), probe_entmax: bool = False) -> dict:
+            use_generator: bool = True, save: bool = True, probe_betas=(), probe_entmax: bool = False, only_modules=None) -> dict:
     """Run one generation. Returns a result dict (audio, spectrogram, final latents, manifest).
     `initial_latents` (if given) is passed verbatim as `latents=`; a seeded generator is still passed
     (harmless: PNDM.step ignores it, prepare_latents skips the draw when latents are provided)."""
@@ -88,7 +88,7 @@ def run_one(pipe, cfg: CastConfig, initial_latents: Optional[torch.Tensor] = Non
     originals = {}
     if cfg.use_cast:
         originals = apply_cast(unet, cfg.alpha, cfg.lam, cfg.apply_to_uncond, cfg.collect_stats,
-                               attention_type=cfg.attention_type, beta=cfg.beta, probe_betas=probe_betas, probe_entmax=probe_entmax, lambda_sharp=cfg.lambda_sharp)
+                               attention_type=cfg.attention_type, beta=cfg.beta, probe_betas=probe_betas, probe_entmax=probe_entmax, lambda_sharp=cfg.lambda_sharp, only=only_modules)
     procs = unet.attn_processors
     attn2_classes = sorted({type(p).__name__ for n, p in procs.items() if n.endswith("attn2.processor")})
     attn1_classes = sorted({type(p).__name__ for n, p in procs.items() if n.endswith("attn1.processor")})

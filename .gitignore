@@ -17,3 +17,10 @@ outputs/**/manifest.json
 
 # rewritten by every pytest run (random-init unit parity numbers); checkpoint-based parity files stay versioned
 outputs/validation/unit_*.json
+
+# reference materials for the assistant only (not shared)
+참고자료/
+
+# local virtualenv for the cast environment
+.venv-cast/
+.venv-cast-eval/
