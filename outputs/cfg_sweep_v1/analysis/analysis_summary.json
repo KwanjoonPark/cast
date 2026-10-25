@@ -1,0 +1,79 @@
+{
+ "bootstrap": {
+  "resamples": 10000,
+  "rng_seed": 20261024,
+  "unit": "prompt (seeds averaged)"
+ },
+ "metrics": {
+  "clap": {
+   "7.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.55546426669591
+   },
+   "3": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.5312924894193808
+   },
+   "1.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.4646116018088328
+   }
+  },
+  "pq": {
+   "7.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 5.918274376127454
+   },
+   "3": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 5.885968804359436
+   },
+   "1.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 5.791001849704319
+   }
+  }
+ },
+ "diagnostics": {
+  "clap": {
+   "7.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.3759432254858459,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.2895652173913043
+   },
+   "3": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.31341753831853997,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": 0.08
+   },
+   "1.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.09512381869009268,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.04608695652173912
+   }
+  },
+  "pq": {
+   "7.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.5492012235322185,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.32347826086956516
+   },
+   "3": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.3790216115467045,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": 0.1695652173913043
+   },
+   "1.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.19642629282668433,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": 0.14956521739130432
+   }
+  }
+ }
+}

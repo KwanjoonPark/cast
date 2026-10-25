@@ -1,0 +1,79 @@
+{
+  "experiment": "cast_cfg_sweep_v1",
+  "prompt_file": "experiments/prompts/cast_diagnostic_v1.json",
+  "prompt_file_sha256": "6fab2188ed8614fe7580d3551bd5178092b28bb55f1ee91a0c0b0df950974b1a",
+  "n_prompts": 24,
+  "cfgs": [
+    7.5,
+    1.5,
+    3.0
+  ],
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "arms": {
+    "dense": {
+      "mode": "cast",
+      "attention_type": "entmax_mix",
+      "lam": 0.0
+    },
+    "sharp_b1.5": {
+      "mode": "sharp_softmax",
+      "beta": 1.5
+    },
+    "entmax_l0.5": {
+      "mode": "cast",
+      "attention_type": "entmax_mix",
+      "lam": 0.5
+    },
+    "entmax_l1": {
+      "mode": "cast",
+      "attention_type": "entmax_mix",
+      "lam": 1.0
+    },
+    "entmax_l2": {
+      "mode": "cast",
+      "attention_type": "entmax_mix",
+      "lam": 2.0
+    }
+  },
+  "initial_latent_sha256_by_seed": {
+    "42": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+    "123": "6e34569f4966d4fd47193dea7ee57dbb50e0459a15d017fd6d3d51791d3d7fa3",
+    "2026": "5ea8d1c0cee830db6eaef8d0105bc3a2868f497151e1b4b95c5062640b099823"
+  },
+  "generation_settings": {
+    "checkpoint": "auffusion/auffusion",
+    "num_inference_steps": 100,
+    "guidance_scale": 7.5,
+    "height": 256,
+    "width": 1024,
+    "dtype": "float16",
+    "autocast": true,
+    "device": "cuda",
+    "alpha": 1.5,
+    "apply_to_uncond": true,
+    "collect_stats": false,
+    "attention_type": "entmax_mix",
+    "beta": 1.0,
+    "lambda_sharp": 0.0,
+    "deterministic_self_attn": true,
+    "output_dir": "outputs/cfg_sweep_v1"
+  },
+  "versions": {
+    "python": "3.10.6",
+    "torch": "2.0.1+cu118",
+    "cuda_runtime": "11.8",
+    "cudnn": "8700",
+    "gpu": "NVIDIA GeForce RTX 2080",
+    "diffusers": "0.18.2",
+    "transformers": "4.31.0",
+    "huggingface_hub": "0.16.4",
+    "entmax": "1.3",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1"
+  },
+  "created": "2026-10-24 02:29:20"
+}

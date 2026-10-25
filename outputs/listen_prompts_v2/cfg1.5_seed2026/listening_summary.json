@@ -1,0 +1,106 @@
+{
+ "cfg": 1.5,
+ "seed": 2026,
+ "arms": [
+  "dense_l0",
+  "pladis_l2"
+ ],
+ "prompts": [
+  {
+   "id": "SG01",
+   "category": "SINGLE_EVENT",
+   "family": "clear",
+   "prompt": "A dog barking loudly."
+  },
+  {
+   "id": "MU01",
+   "category": "MULTI_SCENE",
+   "family": "clear",
+   "prompt": "A dog barks, a baby cries, and a telephone rings at the same time."
+  },
+  {
+   "id": "AT01",
+   "category": "ATTRIBUTE_BINDING",
+   "family": "clear",
+   "prompt": "A high-pitched bell ringing slowly."
+  },
+  {
+   "id": "TM01",
+   "category": "TEMPORAL_STRUCTURE",
+   "family": "clear",
+   "prompt": "A car horn honks, and then a car crashes."
+  },
+  {
+   "id": "AB01",
+   "category": "ABSTRACT",
+   "family": "ambiguous",
+   "prompt": "A warm, crackling texture."
+  },
+  {
+   "id": "IM01",
+   "category": "IMPLICIT_SCENE",
+   "family": "ambiguous",
+   "prompt": "A busy kitchen during the dinner rush."
+  },
+  {
+   "id": "UN01",
+   "category": "UNUSUAL_COMBINATION",
+   "family": "ambiguous",
+   "prompt": "A cat meowing underwater."
+  },
+  {
+   "id": "LX01",
+   "category": "LINGUISTIC_AMBIGUITY",
+   "family": "ambiguous",
+   "prompt": "A loud boom, then drip, drip, drip."
+  },
+  {
+   "id": "VO01",
+   "category": "VOICE_CULTURE",
+   "family": "clear",
+   "prompt": "A man says hello in Korean."
+  },
+  {
+   "id": "EN01",
+   "category": "ACOUSTIC_SPACE",
+   "family": "clear",
+   "prompt": "A man shouts \"yahoo\" inside a cave, and the shout echoes many times."
+  },
+  {
+   "id": "MS01",
+   "category": "MUSIC",
+   "family": "clear",
+   "prompt": "A solo piano playing a slow, sad melody in a minor key."
+  },
+  {
+   "id": "NA01",
+   "category": "NATURE_ANIMAL",
+   "family": "clear",
+   "prompt": "Frogs croaking loudly in a rice paddy at night."
+  },
+  {
+   "id": "MC01",
+   "category": "MACHINE_VEHICLE",
+   "family": "clear",
+   "prompt": "A car approaches from far away, passes by quickly, and fades into the distance."
+  },
+  {
+   "id": "HL01",
+   "category": "HOUSEHOLD",
+   "family": "clear",
+   "prompt": "Eggs sizzling and popping in a hot frying pan."
+  },
+  {
+   "id": "CU01",
+   "category": "CULTURAL_SOUNDSCAPE",
+   "family": "clear",
+   "prompt": "A large bronze temple bell struck slowly, with a long humming resonance."
+  },
+  {
+   "id": "FX01",
+   "category": "MEDIA_EFFECT",
+   "family": "clear",
+   "prompt": "A man's voice through a crackling walkie-talkie with bursts of static."
+  }
+ ]
+}
