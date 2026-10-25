@@ -95,11 +95,14 @@ def main():
                 if r is None: continue
                 ax.errorbar(k, r["delta"], yerr=[[r["delta"] - r["ci_lo"]], [r["ci_hi"] - r["delta"]]], fmt="s" if arm != "sharp_b1.5" else "o", color=COL[arm], ms=4.5, capsize=3, lw=1.0)
             ax.axhline(0, color="black", lw=0.8, ls="--"); ax.set_xlim(-0.6, 3.6); ax.grid(axis="y", alpha=0.25, lw=0.5)
-            ax.set_xticks(range(4)); ax.set_xticklabels([LABEL[x] for x in ARMS[1:]] if i == len(cfgs) - 1 else [], fontsize=6.5)
+            ax.set_xticks(range(4)); ax.set_xticklabels([LABEL[x] for x in ARMS[1:]] if i == len(cfgs) - 1 else [], fontsize=7.5)
             if i == 0: ax.set_title(METRIC_TITLE[met], fontsize=8.5, loc="left")
             if j == 0: ax.set_ylabel(f"CFG {cfg:.1f}\nΔ vs Dense", fontsize=8)
             for s in ("top", "right"): ax.spines[s].set_visible(False)
-    fig.tight_layout(); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.pdf"), bbox_inches="tight"); plt.close(fig)
+    fig.tight_layout(); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.pdf"), bbox_inches="tight")
+    if mets == ["clap", "pq", "aqa"]:   # manuscript figure name once all three metrics are scored (same figure, fixed name)
+        fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid_3metrics.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid_3metrics.pdf"), bbox_inches="tight")
+    plt.close(fig)
     # Figure B: delta vs CFG (lines with CI), plus Dense baseline vs CFG
     fig, axes = plt.subplots(2, len(mets), figsize=(2.6 * len(mets) + 0.4, 4.2), squeeze=False)
     xs = sorted(cfgs)
