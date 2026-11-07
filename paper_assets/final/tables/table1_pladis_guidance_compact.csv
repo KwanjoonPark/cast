@@ -1,0 +1,5 @@
+guidance,delta_clap,delta_aqascore,delta_pq,ci_excludes_zero_clap,ci_excludes_zero_aqascore,ci_excludes_zero_pq,generation_gpu
+CFG 7.5,-0.192882,-0.099419,-0.630036,1,1,1,NVIDIA GeForce RTX 2080
+CFG 3.0,-0.101610,-0.064609,-0.256632,1,1,1,NVIDIA GeForce RTX 2080
+CFG 1.5,-0.069558,-0.027614,-0.063549,1,0,0,NVIDIA GeForce RTX 2080
+No-CFG*,-0.045842,-0.010655,-0.062076,1,0,0,NVIDIA RTX A5000
