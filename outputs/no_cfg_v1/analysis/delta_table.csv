@@ -1,0 +1,4 @@
+metric,condition,arm,n_prompts,n_seeds,dense_mean,arm_mean,delta,ci_lo,ci_hi,frac_prompts_arm_better,classification,n_improved,n_degraded,n_neutral,neutral_threshold,n_prompts_delta_positive,n_prompts_delta_negative,pladis_delta_seed_consistency_mean_pairwise_r
+clap,no_cfg (guidance_scale=1.0),entmax_l2,24,3,0.3851044963424404,0.3392622045551737,-0.04584229178726673,-0.07662785016258972,-0.0189145268380849,0.20833333333333334,Significant degradation,4,17,3,0.01,5,19,0.16267512923579278
+pq,no_cfg (guidance_scale=1.0),entmax_l2,24,3,5.731336583693822,5.669260796573428,-0.06207578712039519,-0.14924218571848333,0.02448570463392479,0.4166666666666667,No measurable difference,10,12,2,0.05,10,14,0.05627962855753774
+aqa,no_cfg (guidance_scale=1.0),entmax_l2,24,3,0.6795690969596321,0.6689139775338685,-0.010655119425763545,-0.05195858434846988,0.03207335387860715,0.375,No measurable difference,8,13,3,0.01,9,15,0.17518698123680998

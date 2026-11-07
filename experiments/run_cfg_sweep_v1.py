@@ -24,6 +24,7 @@ def main():
     ap.add_argument("--limit-prompts", type=int, default=None)
     ap.add_argument("--arms", nargs="+", default=list(ARMS))
     ap.add_argument("--out", default="outputs/cfg_sweep_v1")
+    ap.add_argument("--experiment", default="cast_cfg_sweep_v1", help="experiment name written to experiment_manifest.json (e.g. cast_no_cfg_v1 for --cfgs 1.0)")
     a = ap.parse_args()
     ds = json.load(open(a.prompt_file, encoding="utf-8")); prompts = ds["prompts"][: a.limit_prompts] if a.limit_prompts else ds["prompts"]
     base = CastConfig(prompt="", mode="cast", lam=0.0, alpha=1.5, seed=a.seeds[0], deterministic_self_attn=True, collect_stats=False, output_dir=a.out)
@@ -32,7 +33,7 @@ def main():
     stock = {n: type(p).__name__ for n, p in pipe.unet.attn_processors.items()}; assert len(stock) == 32 and len(select_cross_attention(pipe.unet)) == 16
     z0 = {s: sample_initial_latents(CastConfig(**{**base.to_dict(), "seed": s})) for s in a.seeds}
     z0_sha = {s: hashlib.sha256(z0[s].float().cpu().numpy().tobytes()).hexdigest() for s in a.seeds}
-    json.dump({"experiment": "cast_cfg_sweep_v1", "prompt_file": a.prompt_file, "prompt_file_sha256": hashlib.sha256(open(a.prompt_file, "rb").read()).hexdigest(),
+    json.dump({"experiment": a.experiment, "prompt_file": a.prompt_file, "prompt_file_sha256": hashlib.sha256(open(a.prompt_file, "rb").read()).hexdigest(),
                "n_prompts": len(prompts), "cfgs": a.cfgs, "seeds": a.seeds, "arms": {k: ARMS[k] for k in a.arms}, "initial_latent_sha256_by_seed": z0_sha,
                "generation_settings": {k: v for k, v in base.to_dict().items() if k not in ("prompt", "mode", "lam", "seed")}, "versions": _versions(),
                "created": time.strftime("%Y-%m-%d %H:%M:%S")}, open(os.path.join(a.out, "experiment_manifest.json"), "w"), indent=2)

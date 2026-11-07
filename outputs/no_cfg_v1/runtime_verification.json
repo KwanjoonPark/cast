@@ -1,0 +1,144 @@
+{
+  "prompt_id": "A01",
+  "prompt": "A dog barking loudly.",
+  "seed": 42,
+  "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+  "gpu": "NVIDIA RTX A5000",
+  "code_path": {
+    "file": "third_party/Auffusion/auffusion_pipeline.py",
+    "rule": "do_classifier_free_guidance = guidance_scale > 1.0",
+    "guidance_scale_used": 1.0
+  },
+  "A_dense": {
+    "unet_calls": 101,
+    "latent_batch_values": [
+      1
+    ],
+    "cond_batch_values": [
+      1
+    ],
+    "zero_cond_rows_total": 0,
+    "zero_cond_rows_per_call_values": [
+      0
+    ],
+    "dir": "outputs/no_cfg_v1/cfg1/DISCRETE_SINGLE/A01/seed_42/dense",
+    "runtime_s": 5.3,
+    "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+    "audio_sha256": "92fb73db29e286b021a262955fcda0877efeca978eaf36322aedcdb1571582d1",
+    "final_latents_sha256": "6f5315729dbee42f11a467244f9cfc22c1c3023b2953b73392b962014426dfe2",
+    "finite": {
+      "audio": true,
+      "spectrogram": true,
+      "final_latents": true
+    },
+    "n_audio_samples": 160000,
+    "duration_s": 10.0,
+    "sample_rate": 16000,
+    "attn2_processor_classes": null,
+    "attn1_processor_classes": null
+  },
+  "A_entmax_l2": {
+    "unet_calls": 101,
+    "latent_batch_values": [
+      1
+    ],
+    "cond_batch_values": [
+      1
+    ],
+    "zero_cond_rows_total": 0,
+    "zero_cond_rows_per_call_values": [
+      0
+    ],
+    "dir": "outputs/no_cfg_v1/cfg1/DISCRETE_SINGLE/A01/seed_42/entmax_l2",
+    "runtime_s": 5.9,
+    "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+    "audio_sha256": "6c8a5974fb80ecb33786a018f5b7a5877afac056957a9cf746fddd8d519f3bd9",
+    "final_latents_sha256": "3125a00e5905dc1b65f14100cb7ee52c0c7dd589f8dee51cd88814d16adfa244",
+    "finite": {
+      "audio": true,
+      "spectrogram": true,
+      "final_latents": true
+    },
+    "n_audio_samples": 160000,
+    "duration_s": 10.0,
+    "sample_rate": 16000,
+    "attn2_processor_classes": null,
+    "attn1_processor_classes": null
+  },
+  "B_dense_rerun": {
+    "unet_calls": 101,
+    "latent_batch_values": [
+      1
+    ],
+    "cond_batch_values": [
+      1
+    ],
+    "zero_cond_rows_total": 0,
+    "zero_cond_rows_per_call_values": [
+      0
+    ],
+    "audio_sha256": "92fb73db29e286b021a262955fcda0877efeca978eaf36322aedcdb1571582d1",
+    "final_latents_sha256": "6f5315729dbee42f11a467244f9cfc22c1c3023b2953b73392b962014426dfe2",
+    "bitwise_equal_to_A": true
+  },
+  "C_contrast_cfg7.5_3steps": {
+    "unet_calls": 4,
+    "latent_batch_values": [
+      2
+    ],
+    "cond_batch_values": [
+      2
+    ],
+    "zero_cond_rows_total": 4,
+    "zero_cond_rows_per_call_values": [
+      1
+    ]
+  },
+  "D_negative_prompt_invariance": {
+    "none": {
+      "audio_sha256": "aff065720fa0f18f88deaffef58bb309d2fab0e278d4bade05c1ba0d0d0114af",
+      "spec_sha256": "2324062560892f85dc91b122e8853762a5711c7d5a3b128347384d0b76eba270",
+      "unet_calls": 11,
+      "latent_batch_values": [
+        1
+      ],
+      "cond_batch_values": [
+        1
+      ],
+      "zero_cond_rows_total": 0,
+      "zero_cond_rows_per_call_values": [
+        0
+      ]
+    },
+    "explicit": {
+      "audio_sha256": "aff065720fa0f18f88deaffef58bb309d2fab0e278d4bade05c1ba0d0d0114af",
+      "spec_sha256": "2324062560892f85dc91b122e8853762a5711c7d5a3b128347384d0b76eba270",
+      "unet_calls": 11,
+      "latent_batch_values": [
+        1
+      ],
+      "cond_batch_values": [
+        1
+      ],
+      "zero_cond_rows_total": 0,
+      "zero_cond_rows_per_call_values": [
+        0
+      ]
+    },
+    "identical": true
+  },
+  "checks": {
+    "no_cfg_latent_batch_is_1": true,
+    "no_cfg_cond_batch_is_1": true,
+    "no_cfg_unconditional_rows_total": 0,
+    "no_cfg_unconditional_forward_passes": 0,
+    "same_initial_latent_dense_vs_pladis": true,
+    "finite": true,
+    "duration_10s_16k": true,
+    "deterministic_rerun": true,
+    "dense_vs_pladis_audio_differ": true,
+    "contrast_cfg7.5_latent_batch_2_and_one_zero_row": true,
+    "negative_prompt_ignored_at_guidance_1": true,
+    "ALL_PASS": true
+  }
+}

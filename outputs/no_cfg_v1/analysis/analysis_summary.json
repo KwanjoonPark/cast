@@ -1,0 +1,86 @@
+{
+ "experiment": "cast_no_cfg_v1",
+ "gpu": "NVIDIA RTX A5000",
+ "guidance_scale": [
+  1.0
+ ],
+ "arms": [
+  "dense",
+  "entmax_l2"
+ ],
+ "bootstrap": {
+  "resamples": 10000,
+  "rng_seed": 20261024,
+  "unit": "prompt (seeds averaged)",
+  "rng_consumption_order": [
+   "clap",
+   "pq",
+   "aqa"
+  ]
+ },
+ "metrics": {
+  "clap": {
+   "metric": "clap",
+   "condition": "no_cfg (guidance_scale=1.0)",
+   "arm": "entmax_l2",
+   "n_prompts": 24,
+   "n_seeds": 3,
+   "dense_mean": 0.3851044963424404,
+   "arm_mean": 0.3392622045551737,
+   "delta": -0.04584229178726673,
+   "ci_lo": -0.07662785016258972,
+   "ci_hi": -0.0189145268380849,
+   "frac_prompts_arm_better": 0.20833333333333334,
+   "classification": "Significant degradation",
+   "n_improved": 4,
+   "n_degraded": 17,
+   "n_neutral": 3,
+   "neutral_threshold": 0.01,
+   "n_prompts_delta_positive": 5,
+   "n_prompts_delta_negative": 19,
+   "pladis_delta_seed_consistency_mean_pairwise_r": 0.16267512923579278
+  },
+  "pq": {
+   "metric": "pq",
+   "condition": "no_cfg (guidance_scale=1.0)",
+   "arm": "entmax_l2",
+   "n_prompts": 24,
+   "n_seeds": 3,
+   "dense_mean": 5.731336583693822,
+   "arm_mean": 5.669260796573428,
+   "delta": -0.06207578712039519,
+   "ci_lo": -0.14924218571848333,
+   "ci_hi": 0.02448570463392479,
+   "frac_prompts_arm_better": 0.4166666666666667,
+   "classification": "No measurable difference",
+   "n_improved": 10,
+   "n_degraded": 12,
+   "n_neutral": 2,
+   "neutral_threshold": 0.05,
+   "n_prompts_delta_positive": 10,
+   "n_prompts_delta_negative": 14,
+   "pladis_delta_seed_consistency_mean_pairwise_r": 0.05627962855753774
+  },
+  "aqa": {
+   "metric": "aqa",
+   "condition": "no_cfg (guidance_scale=1.0)",
+   "arm": "entmax_l2",
+   "n_prompts": 24,
+   "n_seeds": 3,
+   "dense_mean": 0.6795690969596321,
+   "arm_mean": 0.6689139775338685,
+   "delta": -0.010655119425763545,
+   "ci_lo": -0.05195858434846988,
+   "ci_hi": 0.03207335387860715,
+   "frac_prompts_arm_better": 0.375,
+   "classification": "No measurable difference",
+   "n_improved": 8,
+   "n_degraded": 13,
+   "n_neutral": 3,
+   "neutral_threshold": 0.01,
+   "n_prompts_delta_positive": 9,
+   "n_prompts_delta_negative": 15,
+   "pladis_delta_seed_consistency_mean_pairwise_r": 0.17518698123680998
+  }
+ }
+}
