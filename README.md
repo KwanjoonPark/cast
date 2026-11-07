@@ -96,8 +96,11 @@ CAST/                                   repository root
 ├── outputs/                            experiment-level results are versioned (csv / json / md / plots);
 │                                       per-run audio, latents, spectrograms and manifests are not
 ├── paper_assets/                       figure sources, exported figures, Korean captions, FIGURE_SELECTION.md
+│   └── final/                          final paper figures/tables/captions (make_final_paper_assets.py), PAPER_ASSET_SELECTION.md
 ├── third_party/                        git submodules, read-only: Auffusion (needed at runtime), PLADIS, ELSA
+├── docs/                               teammate handoff report (docx) for the CFG sweep branch
 ├── CAST_*_REPORT.md                    one report per stage (see Experiments)
+├── HANDOFF_*.md, HARDWARE_REPRODUCTION_NOTE.md   handoff verification, change log, RTX 2080 -> A5000 reproduction note
 ├── CLAUDE.md                           project rules for assistant-driven work
 └── README.md
 ```
@@ -193,6 +196,11 @@ Each stage has a driver script, a config that defines the arms, and a report. Th
 | Sharp Softmax v1 (β {1, 1.25, 1.5, 2}) | `run_sharp_softmax_v1.py`, `configs/sharp_softmax_v1.yaml` | `eval_clap_diagnostic.py --cond-key beta`, `make_entropy_csv.py`, `analyze_sharp_softmax_v1.py`, `make_human_eval_package_sharp.py` | `CAST_SHARP_SOFTMAX_REPORT.md` |
 | Multi-metric evaluation (AQAScore, AudioBox) | – | `eval_aqascore.py`, `eval_audiobox.py`, `analyze_multimetric.py` (`cast-eval` env) | `CAST_MULTI_METRIC_EVALUATION_REPORT.md` |
 | Partial sharp v1 (β = 1.5, λ_sharp sweep) | `run_sharp_mix_v1.py`, `configs/sharp_mix_v1.yaml` | `eval_sharp_mix_metrics.py`, `analyze_sharp_mix_v1.py` | `CAST_PARTIAL_SHARP_REPORT.md` |
+| CFG sweep (24 prompts × 3 seeds × CFG {7.5, 3.0, 1.5} × 5 arms; RTX 2080) | `run_cfg_sweep_v1.py`, `make_sweep_index.py` | `score_sweep_clap.py`, `eval_aqascore.py`, `eval_audiobox.py`, `analyze_cfg_sweep_v1.py` | `CAST_ADVISOR_FEEDBACK_COMPLETION_REPORT.md`, `docs/` (handoff report) |
+| Prompt-v2 screening and layer ablation (exploratory; RTX 2080) | `make_listening_set.py`, `run_layer_ablation_v1.py` | `score_listening_clap.py`, `analyze_listening_v2.py`, `analyze_layer_ablation_v1.py` | `CAST_ADVISOR_FEEDBACK_COMPLETION_REPORT.md` |
+| True no-CFG (guidance_scale 1.0 = conditional-only; A5000) | `run_cfg_sweep_v1.py --cfgs 1.0 --arms dense entmax_l2`, `verify_no_cfg_runtime.py` | `analyze_no_cfg_v1.py` | `CAST_NO_CFG_FINAL_REPORT.md` |
+| Same-hardware reproduction of the CFG sweep (Dense, PLADIS; A5000) | `run_cfg_sweep_v1.py --cfgs 7.5 3.0 1.5 --arms dense entmax_l2`, `smoke_guidance_pairs.py` | `analyze_a5000_guidance_v1.py` | `HARDWARE_REPRODUCTION_NOTE.md` |
+| Paper assets (figures, tables, captions; reads tables only) | – | `make_final_paper_assets.py` → `paper_assets/final/` | `paper_assets/final/PAPER_ASSET_SELECTION.md` |
 
 Drivers reuse existing audio when the stored manifest matches the requested condition bitwise, so later stages share the dense baseline and other overlapping arms with earlier ones instead of regenerating them.
 
@@ -228,7 +236,7 @@ Only the intended attention hyperparameter differs: `lam` (λ_entmax) in the Ent
 
 ## Results
 
-Results, their statistical treatment and the decision taken at each stage are documented in the stage reports listed above. This README intentionally does not restate numbers; read the latest report (`CAST_PARTIAL_SHARP_REPORT.md`) for the current conclusion and the earlier ones for the evidence chain.
+Results, their statistical treatment and the decision taken at each stage are documented in the stage reports listed above. This README intentionally does not restate numbers; read the latest reports (`CAST_ADVISOR_FEEDBACK_COMPLETION_REPORT.md`, `CAST_NO_CFG_FINAL_REPORT.md`, `HARDWARE_REPRODUCTION_NOTE.md`) for the current conclusion and the earlier ones for the evidence chain. Paper-ready sentences are collected in `PAPER_RESULT_SNIPPETS_KO.md`.
 
 ---
 
@@ -255,9 +263,13 @@ Diagnostic v1 (24 prompts × 3 seeds)   DONE
 Sharp Softmax v1                       DONE
 Multi-metric evaluation                DONE  (AQAScore, AudioBox Aesthetics)
 Partial sharp v1                       DONE
+CFG sweep 7.5 / 3.0 / 1.5 (5 arms)     DONE  (RTX 2080; CLAP, AQAScore, PQ)
+Prompt-v2 screening, layer ablation    DONE  (exploratory; CLAP, PQ)
+True no-CFG (conditional-only)         DONE  (A5000; runtime-verified code path)
+Same-hardware CFG reproduction         DONE  (A5000; Dense, PLADIS)
 ELSA                                   BLOCKED (gated weights, API key)
 Human evaluation                       PACKAGES READY, ratings pending
-Paper figures                          DONE  (paper_assets/)
+Paper figures                          DONE  (paper_assets/final/)
 ```
 
 ---
