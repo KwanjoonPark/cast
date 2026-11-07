@@ -24,3 +24,4 @@ outputs/validation/unit_*.json
 # local virtualenv for the cast environment
 .venv-cast/
 .venv-cast-eval/
+cast_cfg_sweep_aqa_package.zip

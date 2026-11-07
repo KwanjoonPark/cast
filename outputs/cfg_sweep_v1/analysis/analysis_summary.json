@@ -38,6 +38,23 @@
     "min_seeds": 3,
     "dense_mean": 5.791001849704319
    }
+  },
+  "aqa": {
+   "7.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.90601490034684
+   },
+   "3": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.8687111773500643
+   },
+   "1.5": {
+    "n_prompts": 24,
+    "min_seeds": 3,
+    "dense_mean": 0.7835924198584848
+   }
   }
  },
  "diagnostics": {
@@ -73,6 +90,23 @@
     "pladis_delta_seed_consistency_mean_pairwise_r": 0.19642629282668433,
     "n_full_seeds": 3,
     "spearman_dense_score_vs_pladis_delta": 0.14956521739130432
+   }
+  },
+  "aqa": {
+   "7.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.17279226605218892,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.20434782608695648
+   },
+   "3": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.15423898260439528,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.013913043478260868
+   },
+   "1.5": {
+    "pladis_delta_seed_consistency_mean_pairwise_r": 0.2627387011692502,
+    "n_full_seeds": 3,
+    "spearman_dense_score_vs_pladis_delta": -0.23304347826086955
    }
   }
  }

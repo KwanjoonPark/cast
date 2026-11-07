@@ -1,0 +1,28 @@
+{
+  "index": "outputs/cfg_sweep_v1/audio_index.csv",
+  "n_index_rows": 1080,
+  "zip": {
+    "path": "./cast_cfg_sweep_aqa_package.zip",
+    "sha256": "a46b69fd6a46022be17b3df169fcaaa728c5373f229b2121f21c803b98600bf1",
+    "expected": "a46b69fd6a46022be17b3df169fcaaa728c5373f229b2121f21c803b98600bf1",
+    "sha_match": true,
+    "n_members": 1084,
+    "n_wav_members": 1080,
+    "n_index_paths_found": 1080,
+    "non_wav_members": [
+      "README_AQAScore.txt",
+      "outputs/cfg_sweep_v1/audio_index.csv",
+      "experiments/eval_aqascore.py",
+      "experiments/prompts/cast_diagnostic_v1.json"
+    ],
+    "n_extracted": 1080
+  },
+  "n_ok": 1080,
+  "n_missing": 0,
+  "n_sha_mismatch": 0,
+  "n_format_unexpected": 0,
+  "missing": [],
+  "sha_mismatch": [],
+  "format_unexpected": [],
+  "verdict": "PASS"
+}

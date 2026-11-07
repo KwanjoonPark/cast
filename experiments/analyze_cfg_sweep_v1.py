@@ -80,10 +80,10 @@ def main():
                                                                        "spearman_dense_score_vs_pladis_delta": sp}
     if not rows: print("no complete data yet"); return
     with open(os.path.join(out_dir, "delta_table.csv"), "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+        w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n"); w.writeheader(); w.writerows(rows)   # LF: matches the committed file, keeps diffs readable
     json.dump(summary, open(os.path.join(out_dir, "analysis_summary.json"), "w"), indent=1)
 
-    cfgs = sorted({r["cfg"] for r in rows}, reverse=True); mets = [k for k in ("clap", "pq", "aqa") if k in tabs and any(r["metric"] == k for r in rows)]
+    cfgs = sorted({r["cfg"] for r in rows}, reverse=True); mets = [k for k in ("clap", "aqa", "pq") if k in tabs and any(r["metric"] == k for r in rows)]   # figure column order: CLAP, AQAScore, PQ
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.linewidth": 0.8})
     # Figure A: Table-1 style grid, rows = CFG (high -> low), cols = metric, shared y per column
     fig, axes = plt.subplots(len(cfgs), len(mets), figsize=(2.3 * len(mets) + 0.6, 1.9 * len(cfgs) + 0.3), squeeze=False, sharey="col")
@@ -100,7 +100,7 @@ def main():
             if j == 0: ax.set_ylabel(f"CFG {cfg:.1f}\nΔ vs Dense", fontsize=8)
             for s in ("top", "right"): ax.spines[s].set_visible(False)
     fig.tight_layout(); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid.pdf"), bbox_inches="tight")
-    if mets == ["clap", "pq", "aqa"]:   # manuscript figure name once all three metrics are scored (same figure, fixed name)
+    if mets == ["clap", "aqa", "pq"]:   # manuscript figure name once all three metrics are scored (same figure, fixed name)
         fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid_3metrics.png"), dpi=300, bbox_inches="tight"); fig.savefig(os.path.join(out_dir, "fig_cfg_delta_grid_3metrics.pdf"), bbox_inches="tight")
     plt.close(fig)
     # Figure B: delta vs CFG (lines with CI), plus Dense baseline vs CFG
