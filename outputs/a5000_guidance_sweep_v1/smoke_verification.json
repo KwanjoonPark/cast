@@ -1,0 +1,146 @@
+{
+  "gpu": "NVIDIA RTX A5000",
+  "prompt_id": "A01",
+  "prompt": "A dog barking loudly.",
+  "seed": 42,
+  "initial_latent_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+  "cfgs": {
+    "7.5": {
+      "runs": {
+        "dense": {
+          "unet_calls": 101,
+          "latent_batch_values": [
+            2
+          ],
+          "cond_batch_values": [
+            2
+          ],
+          "zero_cond_rows_total": 101,
+          "zero_cond_rows_per_call_values": [
+            1
+          ],
+          "dir": "outputs/a5000_guidance_sweep_v1/cfg7.5/DISCRETE_SINGLE/A01/seed_42/dense",
+          "runtime_s": 8.1,
+          "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+          "audio_sha256": "04e6a8c318ae99f8d0d96ffd83c35f5c4f05697c10eed01ca2ba82e06a785b32",
+          "final_latents_sha256": "6ec0530545e7c23ceccfb4067f986244b0c9a5961217d12ff27ba5379e3cfcb8",
+          "finite": true,
+          "n_audio_samples": 160000,
+          "sample_rate": 16000,
+          "attn2": [
+            "CastCrossAttnProcessor"
+          ],
+          "attn1": [
+            "AttnProcessor2_0"
+          ]
+        },
+        "entmax_l2": {
+          "unet_calls": 101,
+          "latent_batch_values": [
+            2
+          ],
+          "cond_batch_values": [
+            2
+          ],
+          "zero_cond_rows_total": 101,
+          "zero_cond_rows_per_call_values": [
+            1
+          ],
+          "dir": "outputs/a5000_guidance_sweep_v1/cfg7.5/DISCRETE_SINGLE/A01/seed_42/entmax_l2",
+          "runtime_s": 9.5,
+          "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+          "audio_sha256": "2b7251baed2f8c8a723ecae994746fc526261a2cd7176ff121c8a2dbb2f1c14f",
+          "final_latents_sha256": "7f0fab8afeda439be7192a600c0d79fffa978a5695c83164e3cef24eb1390744",
+          "finite": true,
+          "n_audio_samples": 160000,
+          "sample_rate": 16000,
+          "attn2": [
+            "CastCrossAttnProcessor"
+          ],
+          "attn1": [
+            "AttnProcessor2_0"
+          ]
+        }
+      },
+      "checks": {
+        "cfg_code_path": true,
+        "same_initial_latent": true,
+        "finite": true,
+        "duration_10s_16k": true,
+        "deterministic_rerun": true,
+        "dense_vs_pladis_differ": true,
+        "attn2_cast_attn1_stock": true,
+        "PASS": true
+      }
+    },
+    "1.5": {
+      "runs": {
+        "dense": {
+          "unet_calls": 101,
+          "latent_batch_values": [
+            2
+          ],
+          "cond_batch_values": [
+            2
+          ],
+          "zero_cond_rows_total": 101,
+          "zero_cond_rows_per_call_values": [
+            1
+          ],
+          "dir": "outputs/a5000_guidance_sweep_v1/cfg1.5/DISCRETE_SINGLE/A01/seed_42/dense",
+          "runtime_s": 7.7,
+          "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+          "audio_sha256": "c567c67135677730764c2340510ccba5c7c226f699f4cb8bb6c6b96b257e314d",
+          "final_latents_sha256": "ec2fbe89f7054aa11e9c2bf25eee2b4b622f2684458df1f67520ecc39e576073",
+          "finite": true,
+          "n_audio_samples": 160000,
+          "sample_rate": 16000,
+          "attn2": [
+            "CastCrossAttnProcessor"
+          ],
+          "attn1": [
+            "AttnProcessor2_0"
+          ]
+        },
+        "entmax_l2": {
+          "unet_calls": 101,
+          "latent_batch_values": [
+            2
+          ],
+          "cond_batch_values": [
+            2
+          ],
+          "zero_cond_rows_total": 101,
+          "zero_cond_rows_per_call_values": [
+            1
+          ],
+          "dir": "outputs/a5000_guidance_sweep_v1/cfg1.5/DISCRETE_SINGLE/A01/seed_42/entmax_l2",
+          "runtime_s": 9.6,
+          "initial_latents_sha256": "ea92f6abbdf335c0073dbfdc58fd8f0684da525c686b951ac618da87a3b10082",
+          "audio_sha256": "a098ce8d6c26306b1e6dcc9c1b493843c56c81059e0f5c39dd572826d3ddab13",
+          "final_latents_sha256": "2fb2bbe53b3ab0c6304d9a8b4b424b6dd1ff8d19fdd0cc339fcb9bd8a977d807",
+          "finite": true,
+          "n_audio_samples": 160000,
+          "sample_rate": 16000,
+          "attn2": [
+            "CastCrossAttnProcessor"
+          ],
+          "attn1": [
+            "AttnProcessor2_0"
+          ]
+        }
+      },
+      "checks": {
+        "cfg_code_path": true,
+        "same_initial_latent": true,
+        "finite": true,
+        "duration_10s_16k": true,
+        "deterministic_rerun": true,
+        "dense_vs_pladis_differ": true,
+        "attn2_cast_attn1_stock": true,
+        "PASS": true
+      }
+    }
+  },
+  "ALL_PASS": true
+}

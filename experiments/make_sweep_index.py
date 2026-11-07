@@ -10,8 +10,10 @@ def main():
     for wav in sorted(glob.glob(os.path.join(a.root, "cfg*", "*", "*", "seed_*", "*", "audio.wav"))):
         if not os.path.exists(os.path.join(os.path.dirname(wav), "manifest.json")): continue
         parts = wav.replace("\\", "/").split("/")[-6:-1]; cfg, cat, pid, seed, arm = parts
+        m = json.load(open(os.path.join(os.path.dirname(wav), "manifest.json"), encoding="utf-8"))   # per-sample provenance (appended columns; readers use names)
         rows.append({"audio_sha256": hashlib.sha256(open(wav, "rb").read()).hexdigest(), "prompt_id": pid, "category": cat, "prompt": pr[pid]["prompt"], "seed": int(seed.split("_")[1]),
-                     "audio_path": wav.replace("\\", "/"), "n_provenances": 1, "provenances": f"{cfg}:{arm}", "cfg": float(cfg[3:]), "arm": arm})
+                     "audio_path": wav.replace("\\", "/"), "n_provenances": 1, "provenances": f"{cfg}:{arm}", "cfg": float(cfg[3:]), "arm": arm,
+                     "lam": m.get("lam"), "guidance_scale": m.get("config", {}).get("guidance_scale"), "latent_sha256": m.get("initial_latents", {}).get("sha256"), "gpu": m.get("versions", {}).get("gpu")})
     out = os.path.join(a.root, "audio_index.csv")
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
